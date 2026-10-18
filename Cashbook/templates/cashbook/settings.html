@@ -1,0 +1,66 @@
+{% extends "cashbook/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Settings" %}{% endblock %}
+{% block content %}
+  <div class="page-heading"><div><span class="eyebrow">{% trans "MAKE IT YOURS" %}</span><h1>{% trans "Settings" %}</h1><p>{% trans "Update your profile and how Cashbook works for you." %}</p></div></div>
+  <nav class="settings-tabs" aria-label="{% trans 'Settings tabs' %}">
+    <a class="settings-tab {% if tab == 'profile' %}active{% endif %}" href="{% url 'settings' %}?tab=profile">{% trans "Profile" %}</a>
+    <a class="settings-tab {% if tab == 'language' %}active{% endif %}" href="{% url 'settings' %}?tab=language">{% trans "Language" %}</a>
+    <a class="settings-tab {% if tab == 'dark-mode' %}active{% endif %}" href="{% url 'settings' %}?tab=dark-mode">{% trans "Dark mode" %}</a>
+    <a class="settings-tab {% if tab == 'time-format' %}active{% endif %}" href="{% url 'settings' %}?tab=time-format">{% trans "Time format" %}</a>
+    <a class="settings-tab {% if tab == 'currency-format' %}active{% endif %}" href="{% url 'settings' %}?tab=currency-format">{% trans "Currency format" %}</a>
+  </nav>
+  {% if tab == "time-format" %}
+    <section class="panel settings-panel language-panel">
+      <div class="settings-card-heading"><span class="settings-icon">◷</span><div><h2>{% trans "Time format" %}</h2><p>{% trans "Choose how event times appear across your calendar." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=time-format" class="stack-form settings-form preference-form">{% csrf_token %}
+        <input type="hidden" name="action" value="time_format">
+        {% for field in time_format_form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}<small class="help-text">{% trans "12-hour example: 3:30 PM. 24-hour example: 15:30." %}</small></div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save time format" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% elif tab == "currency-format" %}
+    <section class="panel settings-panel language-panel">
+      <div class="settings-card-heading"><span class="settings-icon">¤</span><div><h2>{% trans "Currency format" %}</h2><p>{% trans "Choose how currency is displayed throughout your cashbook." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=currency-format" class="stack-form settings-form preference-form">{% csrf_token %}
+        <input type="hidden" name="action" value="currency_format">
+        {% for field in currency_format_form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}<small class="help-text">{% trans "Use the symbol or ISO currency code before each amount." %}</small></div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save currency format" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% elif tab == "dark-mode" %}
+    <section class="panel settings-panel language-panel theme-panel">
+      <div class="settings-card-heading"><span class="settings-icon">◐</span><div><h2>{% trans "Dark mode" %}</h2><p>{% trans "Choose the appearance that feels comfortable to you." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=dark-mode" class="stack-form settings-form theme-form">{% csrf_token %}
+        <input type="hidden" name="action" value="dark_mode">
+        <div class="theme-setting-row">
+          <div class="theme-setting-copy"><strong>{% trans "Use dark appearance" %}</strong><p>{% trans "Darken the background and panels throughout Cashbook." %}</p></div>
+          <label class="theme-switch" for="{{ dark_mode_form.dark_mode.id_for_label }}">{{ dark_mode_form.dark_mode }}<span class="theme-switch-track" aria-hidden="true"></span><span class="visually-hidden">{% trans "Enable dark mode" %}</span></label>
+        </div>
+        {% if dark_mode_form.dark_mode.errors %}<div class="field-error">{{ dark_mode_form.dark_mode.errors }}</div>{% endif %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save appearance" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% elif tab == "language" %}
+    <section class="panel settings-panel language-panel">
+      <div class="settings-card-heading"><span class="settings-icon">文</span><div><h2>{% trans "Language" %}</h2><p>{% trans "Choose the language used across your cashbook." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=language" class="stack-form settings-form">{% csrf_token %}
+        <input type="hidden" name="action" value="language">
+        {% for field in language_form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}</div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save language" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% else %}
+    <div class="settings-layout">
+      <section class="panel settings-panel"><div class="settings-card-heading"><span class="settings-icon">◎</span><div><h2>{% trans "Personal details" %}</h2><p>{% trans "Change the name and currency shown in your cashbook." %}</p></div></div>
+        <div class="account-email"><span class="account-email-icon">✉</span><div><small>{% trans "EMAIL ADDRESS" %}</small><strong>{{ user.email }}</strong></div><span class="verified-pill">{% trans "Account email" %}</span></div>
+        <form method="post" action="{% url 'settings' %}?tab=profile" class="stack-form settings-form">{% csrf_token %}
+          <input type="hidden" name="action" value="profile">
+          {% for field in form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}</div>{% endfor %}
+          <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save changes" %} <span aria-hidden="true">→</span></button></div>
+        </form>
+      </section>
+      <section class="panel settings-panel security-panel"><div class="settings-card-heading"><span class="settings-icon lock-icon">⌑</span><div><h2>{% trans "Password & security" %}</h2><p>{% trans "Keep your account secure with a strong password." %}</p></div></div><div class="security-row"><div><strong>{% trans "Password" %}</strong><small>{% trans "Change your password at any time." %}</small></div><a class="button button-secondary button-small" href="{% url 'password_change' %}">{% trans "Change password" %} <span>→</span></a></div></section>
+    </div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "cashbook/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Overview" %}{% endblock %}
+{% block content %}
+  <div class="page-heading dashboard-heading">
+    <div><span class="eyebrow">{% trans "YOUR FINANCES, AT A GLANCE" %}</span><h1>{% trans "Good day," %} {{ user.first_name|default:user.display_name }} <span class="wave">✳</span></h1><p>{% trans "Here’s how your money is looking today." %}</p></div>
+    <a class="button button-primary" href="{% url 'transaction_create' %}"><span class="plus">＋</span> {% trans "Add transaction" %}</a>
+  </div>
+
+  <section class="summary-grid" aria-label="{% trans 'Cash summary' %}">
+    <article class="summary-card balance-card"><div class="summary-top"><span class="summary-label">{% trans "TOTAL BALANCE" %}</span><span class="summary-icon balance-icon">↗</span></div><div class="summary-value">{{ balance }}</div><div class="summary-caption"><span class="status-dot"></span> {% trans "Across all your transactions" %}</div><div class="balance-decoration"></div></article>
+    <article class="summary-card"><div class="summary-top"><span class="summary-label">{% trans "CASH IN" %} <span class="summary-period">{% trans "THIS MONTH" %}</span></span><span class="summary-icon income-icon">↙</span></div><div class="summary-value">{{ month_income }}</div><div class="summary-caption">{% trans "Money received this month" %}</div><div class="mini-track"><span class="mini-fill income-fill"></span></div></article>
+    <article class="summary-card"><div class="summary-top"><span class="summary-label">{% trans "CASH OUT" %} <span class="summary-period">{% trans "THIS MONTH" %}</span></span><span class="summary-icon expense-icon">↗</span></div><div class="summary-value">{{ month_expense }}</div><div class="summary-caption">{% trans "Money spent this month" %}</div><div class="mini-track"><span class="mini-fill expense-fill"></span></div></article>
+  </section>
+
+  <section class="content-grid">
+    <article class="panel chart-panel">
+      <div class="panel-heading"><div><h2>{% trans "Cash flow" %}</h2><p>{% trans "Your income and spending over the last 6 months" %}</p></div><span class="chart-legend"><i class="legend-income"></i> {% trans "Cash in" %} <i class="legend-expense"></i> {% trans "Cash out" %}</span></div>
+      <div class="chart-area" role="img" aria-label="{% trans 'Monthly cash in and cash out comparison' %}">
+        <div class="chart-y"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0</span></div>
+        <div class="chart-columns">{% for item in chart %}<div class="chart-month"><div class="bar-pair"><span class="bar bar-income" style="height:{{ item.income_height }}%" title="Cash in: {{ currency_prefix }}{{ item.income|floatformat:2 }}"></span><span class="bar bar-expense" style="height:{{ item.expense_height }}%" title="Cash out: {{ currency_prefix }}{{ item.expense|floatformat:2 }}"></span></div><span class="chart-label">{{ item.label }}</span></div>{% endfor %}</div>
+      </div>
+    </article>
+
+    <article class="panel upcoming-panel">
+      <div class="panel-heading"><div><h2>{% trans "Coming up" %}</h2><p>{% trans "A few dates to keep in mind" %}</p></div><a class="text-link" href="{% url 'calendar' %}">{% trans "Calendar" %} <span>→</span></a></div>
+      {% if upcoming_events %}<div class="upcoming-list">{% for event in upcoming_events %}<a class="upcoming-item" href="{% url 'event_edit' event.pk %}"><span class="event-date"><strong>{{ event.date|date:"d" }}</strong><small>{{ event.date|date:"M" }}</small></span><span class="upcoming-copy"><strong>{{ event.title }}</strong><small>{% if event.date == today %}{% trans "Today" %}{% else %}{{ event.date|date:"l, M j" }}{% endif %}{% if event.time %} · {{ event.time|time:time_display_format }}{% endif %}</small></span><span class="upcoming-arrow">↗</span></a>{% endfor %}</div>{% else %}<div class="small-empty"><span class="empty-symbol">◷</span><p>{% trans "Nothing on the calendar yet." %}</p><a class="text-link" href="{% url 'event_create' %}">{% trans "Add a date" %} <span>→</span></a></div>{% endif %}
+    </article>
+  </section>
+
+  <section class="panel transactions-panel">
+    <div class="panel-heading"><div><h2>{% trans "Recent transactions" %}</h2><p>{% trans "Your latest cash in and cash out" %}</p></div><a class="text-link" href="{% url 'transactions' %}">{% trans "See all" %} <span>→</span></a></div>
+    {% if recent_transactions %}
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>{% trans "DETAIL" %}</th><th>{% trans "CATEGORY" %}</th><th>{% trans "DATE" %}</th><th class="align-right">{% trans "AMOUNT" %}</th></tr></thead><tbody>
+      {% for item in recent_transactions %}<tr><td><span class="transaction-avatar {% if item.kind == 'income' %}avatar-income{% else %}avatar-expense{% endif %}">{% if item.kind == 'income' %}↙{% else %}↗{% endif %}</span><span class="transaction-name"><strong>{{ item.description|default:item.category }}</strong><small>{% if item.kind == 'income' %}{% trans "Cash in" %}{% else %}{% trans "Cash out" %}{% endif %}</small></span></td><td><span class="category-tag">{{ item.category }}</span></td><td>{{ item.date|date:"M j, Y" }}</td><td class="align-right amount {% if item.kind == 'income' %}amount-in{% else %}amount-out{% endif %}">{% if item.kind == 'income' %}+{% else %}−{% endif %}{{ currency_prefix }}{{ item.amount|floatformat:2 }}</td></tr>{% endfor %}
+    </tbody></table></div>
+    {% else %}<div class="empty-state"><span class="empty-art">↙</span><h3>{% trans "Your first step starts here" %}</h3><p>{% trans "Add a transaction to get a clear picture of your cash flow." %}</p><a class="button button-primary button-small" href="{% url 'transaction_create' %}">{% trans "Add your first transaction" %}</a></div>{% endif %}
+  </section>
+  <div class="dashboard-footnote"><span>✦</span> {% trans "A little awareness goes a long way." %}</div>
+{% endblock %}

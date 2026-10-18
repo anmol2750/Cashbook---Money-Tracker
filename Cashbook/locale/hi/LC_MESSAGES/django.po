@@ -1,0 +1,742 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "English"
+msgstr "अंग्रेज़ी"
+
+msgid "Hindi (हिन्दी)"
+msgstr "हिन्दी"
+
+msgid "Indian Rupee (₹)"
+msgstr "भारतीय रुपया (₹)"
+
+msgid "US Dollar ($)"
+msgstr "अमेरिकी डॉलर ($)"
+
+msgid "Euro (€)"
+msgstr "यूरो (€)"
+
+msgid "British Pound (£)"
+msgstr "ब्रिटिश पाउंड (£)"
+
+msgid "Canadian Dollar (C$)"
+msgstr "कनाडाई डॉलर (C$)"
+
+msgid "Australian Dollar (A$)"
+msgstr "ऑस्ट्रेलियाई डॉलर (A$)"
+
+msgid "Cash in"
+msgstr "नकद प्राप्त"
+
+msgid "Cash out"
+msgstr "नकद खर्च"
+
+msgid "WORKSPACE"
+msgstr "कार्यस्थान"
+
+msgid "Overview"
+msgstr "अवलोकन"
+
+msgid "Transactions"
+msgstr "लेन-देन"
+
+msgid "Notes"
+msgstr "नोट्स"
+
+msgid "Calendar"
+msgstr "कैलेंडर"
+
+msgid "Cash calculator"
+msgstr "नकद कैलकुलेटर"
+
+msgid "PREFERENCES"
+msgstr "प्राथमिकताएँ"
+
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+msgid "Your money, in focus"
+msgstr "आपके पैसे पर नज़र"
+
+msgid "A calmer way to keep track."
+msgstr "हिसाब रखने का आसान तरीका।"
+
+msgid "Sign out"
+msgstr "साइन आउट"
+
+msgid "MAKE IT YOURS"
+msgstr "इसे अपने अनुसार बनाएँ"
+
+msgid "Update your profile and how Cashbook works for you."
+msgstr "अपनी प्रोफ़ाइल और कैशबुक की सेटिंग्स बदलें।"
+
+msgid "Settings tabs"
+msgstr "सेटिंग्स टैब"
+
+msgid "Profile"
+msgstr "प्रोफ़ाइल"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Choose the language used across your cashbook."
+msgstr "कैशबुक में इस्तेमाल होने वाली भाषा चुनें।"
+
+msgid "Display language"
+msgstr "प्रदर्शन भाषा"
+
+msgid "Save language"
+msgstr "भाषा सहेजें"
+
+msgid "Personal details"
+msgstr "व्यक्तिगत जानकारी"
+
+msgid "Change the name and currency shown in your cashbook."
+msgstr "कैशबुक में दिखने वाला नाम और मुद्रा बदलें।"
+
+msgid "EMAIL ADDRESS"
+msgstr "ईमेल पता"
+
+msgid "Account email"
+msgstr "खाते का ईमेल"
+
+msgid "Save changes"
+msgstr "बदलाव सहेजें"
+
+msgid "Password & security"
+msgstr "पासवर्ड और सुरक्षा"
+
+msgid "Keep your account secure with a strong password."
+msgstr "मज़बूत पासवर्ड से अपने खाते को सुरक्षित रखें।"
+
+msgid "Password"
+msgstr "पासवर्ड"
+
+msgid "Change your password at any time."
+msgstr "आप कभी भी अपना पासवर्ड बदल सकते हैं।"
+
+msgid "Change password"
+msgstr "पासवर्ड बदलें"
+
+msgid "YOUR FINANCES, AT A GLANCE"
+msgstr "आपके पैसों का एक नज़र में हिसाब"
+
+msgid "Good day,"
+msgstr "नमस्कार,"
+
+msgid "Here’s how your money is looking today."
+msgstr "आज आपके पैसों का हाल यह है।"
+
+msgid "Add transaction"
+msgstr "लेन-देन जोड़ें"
+
+msgid "TOTAL BALANCE"
+msgstr "कुल शेष"
+
+msgid "Across all your transactions"
+msgstr "आपके सभी लेन-देन का कुल"
+
+msgid "CASH IN"
+msgstr "नकद प्राप्त"
+
+msgid "THIS MONTH"
+msgstr "इस महीने"
+
+msgid "Money received this month"
+msgstr "इस महीने प्राप्त राशि"
+
+msgid "CASH OUT"
+msgstr "नकद खर्च"
+
+msgid "Money spent this month"
+msgstr "इस महीने खर्च की गई राशि"
+
+msgid "Cash flow"
+msgstr "नकदी प्रवाह"
+
+msgid "Your income and spending over the last 6 months"
+msgstr "पिछले 6 महीनों की आय और खर्च"
+
+msgid "Coming up"
+msgstr "आने वाले दिन"
+
+msgid "A few dates to keep in mind"
+msgstr "ध्यान रखने योग्य कुछ तारीखें"
+
+msgid "Today"
+msgstr "आज"
+
+msgid "Nothing on the calendar yet."
+msgstr "कैलेंडर में अभी कुछ नहीं है।"
+
+msgid "Add a date"
+msgstr "तारीख जोड़ें"
+
+msgid "Recent transactions"
+msgstr "हाल के लेन-देन"
+
+msgid "Your latest cash in and cash out"
+msgstr "आपकी हाल की प्राप्तियाँ और खर्च"
+
+msgid "See all"
+msgstr "सभी देखें"
+
+msgid "DETAIL"
+msgstr "विवरण"
+
+msgid "CATEGORY"
+msgstr "श्रेणी"
+
+msgid "DATE"
+msgstr "तारीख"
+
+msgid "AMOUNT"
+msgstr "राशि"
+
+msgid "Your first step starts here"
+msgstr "आपकी शुरुआत यहाँ से होती है"
+
+msgid "Add a transaction to get a clear picture of your cash flow."
+msgstr "नकदी प्रवाह समझने के लिए अपना पहला लेन-देन जोड़ें।"
+
+msgid "Add your first transaction"
+msgstr "अपना पहला लेन-देन जोड़ें"
+
+msgid "A little awareness goes a long way."
+msgstr "थोड़ी सी जानकारी बहुत काम आती है।"
+
+msgid "YOUR MONEY"
+msgstr "आपका पैसा"
+
+msgid "Every bit of cash in and cash out, all together."
+msgstr "आपकी सारी प्राप्तियाँ और खर्च एक ही जगह।"
+
+msgid "Based on your current view"
+msgstr "वर्तमान सूची के आधार पर"
+
+msgid "Search transactions"
+msgstr "लेन-देन खोजें"
+
+msgid "Filter transaction type"
+msgstr "लेन-देन का प्रकार चुनें"
+
+msgid "All types"
+msgstr "सभी प्रकार"
+
+msgid "Filter time period"
+msgstr "समय अवधि चुनें"
+
+msgid "All time"
+msgstr "सभी समय"
+
+msgid "Daily"
+msgstr "दैनिक"
+
+msgid "Weekly"
+msgstr "साप्ताहिक"
+
+msgid "Monthly"
+msgstr "मासिक"
+
+msgid "Yearly"
+msgstr "वार्षिक"
+
+msgid "Apply"
+msgstr "लागू करें"
+
+msgid "Clear"
+msgstr "साफ़ करें"
+
+msgid "Edit transaction"
+msgstr "लेन-देन संपादित करें"
+
+msgid "Edit"
+msgstr "संपादित करें"
+
+msgid "Delete transaction"
+msgstr "लेन-देन हटाएँ"
+
+msgid "Delete"
+msgstr "हटाएँ"
+
+msgid "No matching transactions"
+msgstr "कोई मिलता-जुलता लेन-देन नहीं मिला"
+
+msgid "No transactions yet"
+msgstr "अभी कोई लेन-देन नहीं है"
+
+msgid "Try another search or clear your filters."
+msgstr "दूसरी खोज करें या फ़िल्टर साफ़ करें।"
+
+msgid "Add your first transaction to start tracking your money."
+msgstr "अपने पैसों का हिसाब शुरू करने के लिए पहला लेन-देन जोड़ें।"
+
+msgid "THOUGHTS & REMINDERS"
+msgstr "विचार और याद दिलाने वाली बातें"
+
+msgid "Your notes"
+msgstr "आपके नोट्स"
+
+msgid "Keep useful thoughts close at hand."
+msgstr "काम की बातें पास में रखें।"
+
+msgid "New note"
+msgstr "नया नोट"
+
+msgid "A fresh page, ready for your thoughts."
+msgstr "आपके विचारों के लिए एक नया पन्ना।"
+
+msgid "Updated"
+msgstr "अपडेट किया"
+
+msgid "A little space for your thoughts"
+msgstr "आपके विचारों के लिए थोड़ी जगह"
+
+msgid "Save a reminder, an idea, or anything you want to come back to."
+msgstr "याद, विचार या ऐसी कोई बात लिखें जिसे बाद में देखना हो।"
+
+msgid "Write your first note"
+msgstr "अपना पहला नोट लिखें"
+
+msgid "DATES TO REMEMBER"
+msgstr "याद रखने वाली तारीखें"
+
+msgid "Your calendar"
+msgstr "आपका कैलेंडर"
+
+msgid "Plan ahead for the things that matter."
+msgstr "ज़रूरी बातों की पहले से योजना बनाएँ।"
+
+msgid "Add event"
+msgstr "कार्यक्रम जोड़ें"
+
+msgid "Previous month"
+msgstr "पिछला महीना"
+
+msgid "Next month"
+msgstr "अगला महीना"
+
+msgid "MON"
+msgstr "सोम"
+
+msgid "TUE"
+msgstr "मंगल"
+
+msgid "WED"
+msgstr "बुध"
+
+msgid "THU"
+msgstr "गुरु"
+
+msgid "FRI"
+msgstr "शुक्र"
+
+msgid "SAT"
+msgstr "शनि"
+
+msgid "SUN"
+msgstr "रवि"
+
+msgid "Add event on"
+msgstr "इस तारीख को कार्यक्रम जोड़ें"
+
+msgid "Your events"
+msgstr "आपके कार्यक्रम"
+
+msgid "This month"
+msgstr "इस महीने"
+
+msgid "event to keep in mind"
+msgid_plural "events to keep in mind"
+msgstr[0] "याद रखने योग्य %(counter)s कार्यक्रम"
+msgstr[1] "याद रखने योग्य %(counter)s कार्यक्रम"
+
+msgid "There are no events this month."
+msgstr "इस महीने कोई कार्यक्रम नहीं है।"
+
+msgid "Add something to remember"
+msgstr "याद रखने के लिए कुछ जोड़ें"
+
+msgid "COUNT YOUR CASH"
+msgstr "अपने नकद की गिनती करें"
+
+msgid "Enter how many notes or coins you have of each denomination."
+msgstr "हर मूल्य के कितने नोट या सिक्के हैं, उनकी संख्या डालें।"
+
+msgid "All counts cleared."
+msgstr "सभी गिनतियाँ साफ़ कर दी गईं।"
+
+msgid "Cash count"
+msgstr "नकद गिनती"
+
+msgid "Total pieces"
+msgstr "कुल नोट और सिक्के"
+
+msgid "Total"
+msgstr "कुल"
+
+msgid "Cash total shared."
+msgstr "नकद का कुल साझा किया गया।"
+
+msgid "Cash summary copied to clipboard."
+msgstr "नकद का हिसाब क्लिपबोर्ड पर कॉपी किया गया।"
+
+msgid "Sharing is not available in this browser."
+msgstr "इस ब्राउज़र में साझा करने की सुविधा उपलब्ध नहीं है।"
+
+msgid "Could not share the cash summary."
+msgstr "नकद का हिसाब साझा नहीं हो सका।"
+
+msgid "Cash denomination calculator"
+msgstr "नोट और सिक्के गिनने का कैलकुलेटर"
+
+msgid "Cash denominations"
+msgstr "नोट और सिक्के"
+
+msgid "Remove one %(value)s denomination"
+msgstr "%(value)s मूल्यवर्ग का एक नोट या सिक्का हटाएँ"
+
+msgid "Count of %(value)s denomination"
+msgstr "%(value)s मूल्यवर्ग के नोट या सिक्कों की संख्या"
+
+msgid "Add one %(value)s denomination"
+msgstr "%(value)s मूल्यवर्ग का एक नोट या सिक्का जोड़ें"
+
+msgid "TOTAL CASH"
+msgstr "कुल नकद"
+
+msgid "Cash summary"
+msgstr "नकद का सारांश"
+
+msgid "Monthly cash in and cash out comparison"
+msgstr "मासिक नकद प्राप्ति और खर्च की तुलना"
+
+msgid "Clear counts"
+msgstr "गिनती साफ़ करें"
+
+msgid "Share total"
+msgstr "कुल साझा करें"
+
+msgid "Back"
+msgstr "वापस"
+
+msgid "Fill in the details below."
+msgstr "नीचे दी गई जानकारी भरें।"
+
+msgid "Cancel"
+msgstr "रद्द करें"
+
+msgid "PLEASE CONFIRM"
+msgstr "कृपया पुष्टि करें"
+
+msgid "Are you sure you want to remove"
+msgstr "क्या आप इसे हटाना चाहते हैं:"
+
+msgid "This action can’t be undone."
+msgstr "इस कार्रवाई को वापस नहीं किया जा सकता।"
+
+msgid "Keep it"
+msgstr "रहने दें"
+
+msgid "Welcome"
+msgstr "स्वागत है"
+
+msgid "A little more clarity"
+msgstr "थोड़ी और स्पष्टता"
+
+msgid "Make room for"
+msgstr "जगह बनाएँ"
+
+msgid "what matters."
+msgstr "ज़रूरी बातों के लिए।"
+
+msgid "A simple place to see where your money goes, and where it takes you."
+msgstr "अपने पैसों की आवक-जावक समझने की एक आसान जगह।"
+
+msgid "One clear view of your everyday money."
+msgstr "रोज़मर्रा के पैसों का साफ़-सुथरा हिसाब।"
+
+msgid "Your cashbook is private to you."
+msgstr "आपकी कैशबुक सिर्फ़ आपके लिए निजी है।"
+
+msgid "Sign in"
+msgstr "साइन इन"
+
+msgid "WELCOME BACK"
+msgstr "वापसी पर स्वागत है"
+
+msgid "Sign in to Cashbook"
+msgstr "कैशबुक में साइन इन करें"
+
+msgid "Your day-to-day money, all in one place."
+msgstr "रोज़मर्रा के पैसों का हिसाब, एक ही जगह।"
+
+msgid "Email address"
+msgstr "ईमेल पता"
+
+msgid "New to Cashbook?"
+msgstr "कैशबुक पर नए हैं?"
+
+msgid "Create an account"
+msgstr "खाता बनाएँ"
+
+msgid "Create account"
+msgstr "खाता बनाएँ"
+
+msgid "YOUR MONEY, ORGANIZED"
+msgstr "आपके पैसों का व्यवस्थित हिसाब"
+
+msgid "Create your account"
+msgstr "अपना खाता बनाएँ"
+
+msgid "Start with a clearer picture of your everyday finances."
+msgstr "अपने रोज़मर्रा के पैसों का साफ़ हिसाब रखना शुरू करें।"
+
+msgid "Already have an account?"
+msgstr "क्या आपका खाता पहले से है?"
+
+msgid "Back to settings"
+msgstr "सेटिंग्स पर वापस जाएँ"
+
+msgid "ACCOUNT SECURITY"
+msgstr "खाते की सुरक्षा"
+
+msgid "Choose a strong password you don’t use elsewhere."
+msgstr "ऐसा मज़बूत पासवर्ड चुनें जिसका इस्तेमाल कहीं और न हो।"
+
+msgid "Update password"
+msgstr "पासवर्ड अपडेट करें"
+
+msgid "Your account is ready. Let’s get your cashbook started."
+msgstr "आपका खाता तैयार है। अपनी कैशबुक शुरू करें।"
+
+msgid "Transaction added to your cashbook."
+msgstr "लेन-देन आपकी कैशबुक में जोड़ दिया गया।"
+
+msgid "Transaction updated."
+msgstr "लेन-देन अपडेट किया गया।"
+
+msgid "Transaction deleted."
+msgstr "लेन-देन हटा दिया गया।"
+
+msgid "Note saved."
+msgstr "नोट सहेजा गया।"
+
+msgid "Note updated."
+msgstr "नोट अपडेट किया गया।"
+
+msgid "Note deleted."
+msgstr "नोट हटा दिया गया।"
+
+msgid "Event added to your calendar."
+msgstr "कार्यक्रम आपके कैलेंडर में जोड़ दिया गया।"
+
+msgid "Event updated."
+msgstr "कार्यक्रम अपडेट किया गया।"
+
+msgid "Event deleted."
+msgstr "कार्यक्रम हटा दिया गया।"
+
+msgid "Your language preference has been saved."
+msgstr "आपकी भाषा पसंद सहेज ली गई है।"
+
+msgid "Your profile settings are saved."
+msgstr "आपकी प्रोफ़ाइल सेटिंग्स सहेज ली गई हैं।"
+
+msgid "Add calendar event"
+msgstr "कैलेंडर में कार्यक्रम जोड़ें"
+
+msgid "Edit calendar event"
+msgstr "कैलेंडर कार्यक्रम संपादित करें"
+
+msgid "Add note"
+msgstr "नोट जोड़ें"
+
+msgid "Edit note"
+msgstr "नोट संपादित करें"
+
+msgid "Delete transaction?"
+msgstr "लेन-देन हटाएँ?"
+
+msgid "Delete note?"
+msgstr "नोट हटाएँ?"
+
+msgid "Delete event?"
+msgstr "कार्यक्रम हटाएँ?"
+
+msgid "Your money"
+msgstr "आपका पैसा"
+
+msgid "Save transaction"
+msgstr "लेन-देन सहेजें"
+
+msgid "Save note"
+msgstr "नोट सहेजें"
+
+msgid "Save event"
+msgstr "कार्यक्रम सहेजें"
+
+msgid "Transaction type"
+msgstr "लेन-देन का प्रकार"
+
+msgid "first name"
+msgstr "पहला नाम"
+
+msgid "last name"
+msgstr "उपनाम"
+
+msgid "currency"
+msgstr "मुद्रा"
+
+msgid "language"
+msgstr "भाषा"
+
+msgid "amount"
+msgstr "राशि"
+
+msgid "category"
+msgstr "श्रेणी"
+
+msgid "description"
+msgstr "विवरण"
+
+msgid "date"
+msgstr "तारीख"
+
+msgid "title"
+msgstr "शीर्षक"
+
+msgid "content"
+msgstr "विवरण"
+
+msgid "time"
+msgstr "समय"
+
+msgid "details"
+msgstr "जानकारी"
+
+msgid "Old password"
+msgstr "पुराना पासवर्ड"
+
+msgid "New password"
+msgstr "नया पासवर्ड"
+
+msgid "New password confirmation"
+msgstr "नए पासवर्ड की पुष्टि करें"
+
+msgid "Main navigation"
+msgstr "मुख्य नेविगेशन"
+
+msgid "Preferences"
+msgstr "प्राथमिकताएँ"
+
+msgid "Toggle navigation"
+msgstr "नेविगेशन दिखाएँ या छिपाएँ"
+
+msgid "Signed in"
+msgstr "साइन इन हैं"
+
+msgid "First name"
+msgstr "पहला नाम"
+
+msgid "Last name"
+msgstr "उपनाम"
+
+msgid "At least 8 characters"
+msgstr "कम से कम 8 अक्षर"
+
+msgid "Repeat your password"
+msgstr "अपना पासवर्ड फिर से लिखें"
+
+msgid "e.g. Salary, Food, Travel"
+msgstr "जैसे वेतन, भोजन, यात्रा"
+
+msgid "Add a short note (optional)"
+msgstr "छोटा नोट जोड़ें (वैकल्पिक)"
+
+msgid "Give your note a title"
+msgstr "अपने नोट को शीर्षक दें"
+
+msgid "Write down an idea, reminder, or anything to remember…"
+msgstr "कोई विचार, याद या ज़रूरी बात लिखें…"
+
+msgid "e.g. Rent due"
+msgstr "जैसे किराया देना है"
+
+msgid "Add a detail (optional)"
+msgstr "विवरण जोड़ें (वैकल्पिक)"
+
+msgid "Password confirmation"
+msgstr "पासवर्ड की पुष्टि"
+
+msgid "Dark mode"
+msgstr "डार्क मोड"
+
+msgid "Choose the appearance that feels comfortable to you."
+msgstr "अपने लिए सुविधाजनक रूप चुनें।"
+
+msgid "Use dark appearance"
+msgstr "डार्क रूप इस्तेमाल करें"
+
+msgid "Darken the background and panels throughout Cashbook."
+msgstr "पूरी कैशबुक की पृष्ठभूमि और पैनलों को गहरा करें।"
+
+msgid "Enable dark mode"
+msgstr "डार्क मोड चालू करें"
+
+msgid "Save appearance"
+msgstr "रूप सहेजें"
+
+msgid "Your appearance preference has been saved."
+msgstr "आपकी रूप-रंग की पसंद सहेज ली गई है।"
+
+msgid "Time format"
+msgstr "समय प्रारूप"
+
+msgid "Choose how event times appear across your calendar."
+msgstr "अपने कैलेंडर में कार्यक्रमों का समय दिखाने का तरीका चुनें।"
+
+msgid "Time display"
+msgstr "समय प्रदर्शन"
+
+msgid "12-hour"
+msgstr "12-घंटे"
+
+msgid "24-hour"
+msgstr "24-घंटे"
+
+msgid "12-hour example: 3:30 PM. 24-hour example: 15:30."
+msgstr "12-घंटे का उदाहरण: 3:30 PM। 24-घंटे का उदाहरण: 15:30।"
+
+msgid "Save time format"
+msgstr "समय प्रारूप सहेजें"
+
+msgid "Your time format preference has been saved."
+msgstr "आपकी समय प्रारूप पसंद सहेज ली गई है।"
+
+msgid "Currency format"
+msgstr "मुद्रा प्रारूप"
+
+msgid "Choose how currency is displayed throughout your cashbook."
+msgstr "पूरी कैशबुक में मुद्रा दिखाने का तरीका चुनें।"
+
+msgid "Currency display"
+msgstr "मुद्रा प्रदर्शन"
+
+msgid "Currency symbol"
+msgstr "मुद्रा चिह्न"
+
+msgid "Currency code"
+msgstr "मुद्रा कोड"
+
+msgid "Use the symbol or ISO currency code before each amount."
+msgstr "हर राशि से पहले मुद्रा चिह्न या ISO मुद्रा कोड इस्तेमाल करें।"
+
+msgid "Save currency format"
+msgstr "मुद्रा प्रारूप सहेजें"
+
+msgid "Your currency format preference has been saved."
+msgstr "आपकी मुद्रा प्रारूप पसंद सहेज ली गई है।"

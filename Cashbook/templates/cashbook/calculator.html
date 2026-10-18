@@ -1,0 +1,40 @@
+{% extends "cashbook/base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Cash calculator" %}{% endblock %}
+{% block content %}
+  <div class="page-heading cash-heading">
+    <div><span class="eyebrow">{% trans "COUNT YOUR CASH" %}</span><h1>{% trans "Cash calculator" %}</h1><p>{% trans "Enter how many notes or coins you have of each denomination." %}</p></div>
+  </div>
+  <div class="cash-calculator-layout">
+    <section class="panel cash-counter" data-currency="{{ user.currency }}" data-currency-prefix="{{ currency_prefix }}" data-clear-message="{% trans 'All counts cleared.' %}" data-share-title="{% trans 'Cash count' %}" data-share-pieces="{% trans 'Total pieces' %}" data-share-total="{% trans 'Total' %}" data-shared-message="{% trans 'Cash total shared.' %}" data-copied-message="{% trans 'Cash summary copied to clipboard.' %}" data-unavailable-message="{% trans 'Sharing is not available in this browser.' %}" data-error-message="{% trans 'Could not share the cash summary.' %}" aria-label="{% trans 'Cash denomination calculator' %}">
+      <div class="cash-total-display">
+        <span class="summary-label">{% trans "TOTAL CASH" %}</span>
+        <strong><span data-currency-prefix>{{ currency_prefix }}</span><output data-grand-total>0</output></strong>
+      </div>
+      <div class="denomination-list" aria-label="{% trans 'Cash denominations' %}">
+        {% for denomination in denominations %}
+          <div class="denomination-row" data-denomination="{{ denomination.value }}">
+            <span class="denomination-value">{{ denomination.value }}</span>
+            <span class="denomination-times" aria-hidden="true">×</span>
+            <button class="count-adjust" type="button" data-adjust="-1" aria-label="{% blocktrans with value=denomination.value %}Remove one {{ value }} denomination{% endblocktrans %}">−</button>
+            <input class="count-input" type="number" min="0" step="1" inputmode="numeric" data-count aria-label="{% blocktrans with value=denomination.value %}Count of {{ value }} denomination{% endblocktrans %}">
+            <button class="count-adjust" type="button" data-adjust="1" aria-label="{% blocktrans with value=denomination.value %}Add one {{ value }} denomination{% endblocktrans %}">+</button>
+            <span class="denomination-equals" aria-hidden="true">=</span>
+            <output class="denomination-total" data-line-total>{{ currency_prefix }}0</output>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="cash-summary">
+        <span class="cash-summary-label">{% trans "Total pieces" %}</span>
+        <output class="piece-count" data-piece-count>0</output>
+        <output class="cash-summary-total"><span data-currency-prefix>{{ currency_prefix }}</span><span data-grand-total-copy>0</span></output>
+      </div>
+      <div class="cash-actions">
+        <button class="button button-secondary clear-cash" type="button" data-clear>{% trans "Clear counts" %}</button>
+        <button class="button button-primary share-cash" type="button" data-share>{% trans "Share total" %} <span aria-hidden="true">↗</span></button>
+      </div>
+      <p class="cash-status" data-status role="status" aria-live="polite"></p>
+    </section>
+  </div>
+{% endblock %}
+{% block scripts %}<script src="{% static 'cashbook/calculator.js' %}" defer></script>{% endblock %}

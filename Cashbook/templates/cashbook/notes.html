@@ -1,0 +1,7 @@
+{% extends "cashbook/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Notes" %}{% endblock %}
+{% block content %}
+  <div class="page-heading"><div><span class="eyebrow">{% trans "THOUGHTS & REMINDERS" %}</span><h1>{% trans "Your notes" %}</h1><p>{% trans "Keep useful thoughts close at hand." %}</p></div><a class="button button-primary" href="{% url 'note_create' %}"><span class="plus">＋</span> {% trans "New note" %}</a></div>
+  {% if notes %}<section class="notes-grid">{% for note in notes %}<article class="note-card"><div class="note-card-top"><span class="note-marker">✳</span><div class="row-actions"><a href="{% url 'note_edit' note.pk %}">{% trans "Edit" %}</a><a href="{% url 'note_delete' note.pk %}" class="delete-link">{% trans "Delete" %}</a></div></div><a class="note-content-link" href="{% url 'note_edit' note.pk %}"><h2>{{ note.title }}</h2><p>{% if note.content %}{{ note.content|linebreaksbr }}{% else %}{% trans "A fresh page, ready for your thoughts." %}{% endif %}</p></a><span class="note-date">{% trans "Updated" %} {{ note.updated_at|date:"M j, Y" }}</span></article>{% endfor %}</section>{% else %}<section class="panel empty-state large-empty"><span class="empty-art">✎</span><h3>{% trans "A little space for your thoughts" %}</h3><p>{% trans "Save a reminder, an idea, or anything you want to come back to." %}</p><a class="button button-primary button-small" href="{% url 'note_create' %}">{% trans "Write your first note" %}</a></section>{% endif %}
+{% endblock %}

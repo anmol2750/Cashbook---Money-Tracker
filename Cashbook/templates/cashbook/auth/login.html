@@ -1,0 +1,16 @@
+{% extends "cashbook/auth/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Sign in" %}{% endblock %}
+{% block auth_content %}
+  <span class="eyebrow">{% trans "WELCOME BACK" %}</span>
+  <h2>{% trans "Sign in to Cashbook" %}</h2>
+  <p class="auth-subtitle">{% trans "Your day-to-day money, all in one place." %}</p>
+  {% if form.non_field_errors %}<div class="form-errors">{{ form.non_field_errors }}</div>{% endif %}
+  <form method="post" class="stack-form">{% csrf_token %}
+    <div class="field"><label for="{{ form.username.id_for_label }}">{% trans "Email address" %}</label>{{ form.username }}{% if form.username.errors %}<div class="field-error">{{ form.username.errors }}</div>{% endif %}</div>
+    <div class="field"><div class="field-label-row"><label for="{{ form.password.id_for_label }}">{% trans "Password" %}</label></div>{{ form.password }}{% if form.password.errors %}<div class="field-error">{{ form.password.errors }}</div>{% endif %}</div>
+    {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+    <button class="button button-primary button-wide" type="submit">{% trans "Sign in" %} <span aria-hidden="true">→</span></button>
+  </form>
+  <p class="auth-switch">{% trans "New to Cashbook?" %} <a href="{% url 'signup' %}">{% trans "Create an account" %}</a></p>
+{% endblock %}

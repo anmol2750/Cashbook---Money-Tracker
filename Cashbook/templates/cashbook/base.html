@@ -1,0 +1,67 @@
+{% load static i18n %}
+<!doctype html>
+<html lang="{{ request.LANGUAGE_CODE|default:'en' }}" data-theme="{% if user.is_authenticated and user.dark_mode %}dark{% else %}light{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{% if user.is_authenticated and user.dark_mode %}#141b17{% else %}#f6f8f5{% endif %}">
+  <title>{% block title %}Cashbook{% endblock %} · Cashbook</title>
+  <link rel="stylesheet" href="{% static 'cashbook/app.css' %}">
+</head>
+<body class="app-body">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="{% url 'dashboard' %}">
+        <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.75A2.75 2.75 0 0 1 7.75 2H20v17H7.75A2.75 2.75 0 0 0 5 21.75v-17Z"/><path d="M5 5h12M9 8h5M9 12h7"/></svg></span>
+        <span>cashbook<span class="brand-period">.</span></span>
+      </a>
+
+      <div class="profile-chip">
+        <span class="avatar">{{ user.first_name|first|upper|default:user.email|first|upper }}</span>
+        <span class="profile-copy"><strong>{{ user.display_name }}</strong><small>{{ user.email }}</small></span>
+        <span class="online-dot" title="{% trans 'Signed in' %}"></span>
+      </div>
+
+      <p class="nav-label">{% trans "WORKSPACE" %}</p>
+      <nav class="primary-nav" aria-label="{% trans 'Main navigation' %}">
+        <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" href="{% url 'dashboard' %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg><span>{% trans "Overview" %}</span>
+        </a>
+        <a class="nav-link {% if request.resolver_match.url_name == 'transactions' or 'transaction' in request.resolver_match.url_name %}active{% endif %}" href="{% url 'transactions' %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h15m0 0-4-4m4 4-4 4M20 17H5m0 0 4-4m-4 4 4 4"/></svg><span>{% trans "Transactions" %}</span>
+        </a>
+        <a class="nav-link {% if 'note' in request.resolver_match.url_name %}active{% endif %}" href="{% url 'notes' %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v6h5M9 13h7m-7 4h7"/></svg><span>{% trans "Notes" %}</span>
+        </a>
+        <a class="nav-link {% if 'calendar' in request.resolver_match.url_name or 'event' in request.resolver_match.url_name %}active{% endif %}" href="{% url 'calendar' %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg><span>{% trans "Calendar" %}</span>
+        </a>
+        <a class="nav-link {% if request.resolver_match.url_name == 'calculator' %}active{% endif %}" href="{% url 'calculator' %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/></svg><span>{% trans "Cash calculator" %}</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <p class="nav-label">{% trans "PREFERENCES" %}</p>
+      <nav aria-label="{% trans 'Preferences' %}">
+        <a class="nav-link {% if 'settings' in request.resolver_match.url_name or 'password' in request.resolver_match.url_name %}active{% endif %}" href="{% url 'settings' %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.6a8 8 0 0 1-1.7 1l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.7-1l-1.7.6-1.4-2.4L7.3 15a8 8 0 0 1 0-2l-1.4-1.1 1.4-2.4 1.7.6a8 8 0 0 1 1.7-1l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.7 1l1.7-.6 1.4 2.4-1.4 1.1a8 8 0 0 1-.1 2Z"/></svg><span>{% trans "Settings" %}</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="privacy-note"><span class="privacy-icon">✦</span><div><strong>{% trans "Your money, in focus" %}</strong><small>{% trans "A calmer way to keep track." %}</small></div></div>
+        <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="logout-link" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3m9-9h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/></svg>{% trans "Sign out" %}</button></form>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="mobile-bar">
+        <a class="brand" href="{% url 'dashboard' %}"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.75A2.75 2.75 0 0 1 7.75 2H20v17H7.75A2.75 2.75 0 0 0 5 21.75v-17Z"/><path d="M5 5h12M9 8h5M9 12h7"/></svg></span><span>cashbook<span class="brand-period">.</span></span></a>
+        <button type="button" class="menu-toggle" aria-label="{% trans 'Toggle navigation' %}" onclick="document.getElementById('sidebar').classList.toggle('sidebar-open')"><span></span><span></span></button>
+      </header>
+      {% if messages %}<div class="toast-stack" aria-live="polite">{% for message in messages %}<div class="toast {{ message.tags }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+      <div class="page-content">{% block content %}{% endblock %}</div>
+    </main>
+  </div>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

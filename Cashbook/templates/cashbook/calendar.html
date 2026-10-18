@@ -1,0 +1,17 @@
+{% extends "cashbook/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Calendar" %}{% endblock %}
+{% block content %}
+  <div class="page-heading"><div><span class="eyebrow">{% trans "DATES TO REMEMBER" %}</span><h1>{% trans "Your calendar" %}</h1><p>{% trans "Plan ahead for the things that matter." %}</p></div><a class="button button-primary" href="{% url 'event_create' %}"><span class="plus">＋</span> {% trans "Add event" %}</a></div>
+  <section class="panel calendar-panel">
+    <div class="calendar-heading"><div class="month-navigation"><a href="{% url 'calendar' %}?year={{ previous_month.year }}&month={{ previous_month.month }}" class="month-arrow" aria-label="{% trans 'Previous month' %}">←</a><h2>{{ month_name }}</h2><a href="{% url 'calendar' %}?year={{ next_month.year }}&month={{ next_month.month }}" class="month-arrow" aria-label="{% trans 'Next month' %}">→</a></div><a class="today-link" href="{% url 'calendar' %}">{% trans "Today" %}</a></div>
+    <div class="calendar-grid">
+      <div class="weekday">{% trans "MON" %}</div><div class="weekday">{% trans "TUE" %}</div><div class="weekday">{% trans "WED" %}</div><div class="weekday">{% trans "THU" %}</div><div class="weekday">{% trans "FRI" %}</div><div class="weekday">{% trans "SAT" %}</div><div class="weekday">{% trans "SUN" %}</div>
+      {% for week in weeks %}{% for day in week %}<div class="calendar-day {% if not day.in_month %}outside-month{% endif %} {% if day.is_today %}today-cell{% endif %}"><span class="day-number">{% if day.is_today %}<b>{{ day.date|date:"j" }}</b>{% else %}{{ day.date|date:"j" }}{% endif %}</span>{% for event in day.events %}<a class="calendar-event" href="{% url 'event_edit' event.pk %}" title="{{ event.title }}">{% if event.time %}<span>{{ event.time|time:time_display_format }}</span>{% endif %} {{ event.title }}</a>{% endfor %}<a class="day-add" href="{% url 'event_create' %}?date={{ day.date|date:'Y-m-d' }}" aria-label="{% trans 'Add event on' %} {{ day.date|date:'M j' }}">＋</a></div>{% endfor %}{% endfor %}
+    </div>
+    <div class="calendar-legend"><span><i class="today-key"></i> {% trans "Today" %}</span><span><i class="event-key"></i> {% trans "Your events" %}</span></div>
+  </section>
+  <section class="panel month-events"><div class="panel-heading"><div><h2>{% trans "This month" %}</h2><p>{% blocktrans count counter=events|length %}{{ counter }} event to keep in mind{% plural %}{{ counter }} events to keep in mind{% endblocktrans %}</p></div></div>
+    {% if events %}<div class="event-list">{% for event in events %}<div class="event-row"><span class="event-date"><strong>{{ event.date|date:"d" }}</strong><small>{{ event.date|date:"M" }}</small></span><div class="event-row-copy"><strong>{{ event.title }}</strong><span>{{ event.date|date:"l, F j" }}{% if event.time %} · {{ event.time|time:time_display_format }}{% endif %}</span>{% if event.details %}<small>{{ event.details }}</small>{% endif %}</div><div class="row-actions"><a href="{% url 'event_edit' event.pk %}">{% trans "Edit" %}</a><a href="{% url 'event_delete' event.pk %}" class="delete-link">{% trans "Delete" %}</a></div></div>{% endfor %}</div>{% else %}<div class="small-empty"><span class="empty-symbol">◷</span><p>{% trans "There are no events this month." %}</p><a class="text-link" href="{% url 'event_create' %}">{% trans "Add something to remember" %} <span>→</span></a></div>{% endif %}
+  </section>
+{% endblock %}

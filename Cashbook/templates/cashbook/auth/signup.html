@@ -1,0 +1,16 @@
+{% extends "cashbook/auth/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Create account" %}{% endblock %}
+{% block auth_content %}
+  <span class="eyebrow">{% trans "YOUR MONEY, ORGANIZED" %}</span>
+  <h2>{% trans "Create your account" %}</h2>
+  <p class="auth-subtitle">{% trans "Start with a clearer picture of your everyday finances." %}</p>
+  <form method="post" class="stack-form">{% csrf_token %}
+    {% if form.non_field_errors %}<div class="form-errors">{{ form.non_field_errors }}</div>{% endif %}
+    {% for field in form %}
+      <div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.help_text %}<small class="help-text">{{ field.help_text|safe }}</small>{% endif %}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}</div>
+    {% endfor %}
+    <button class="button button-primary button-wide" type="submit">{% trans "Create account" %} <span aria-hidden="true">→</span></button>
+  </form>
+  <p class="auth-switch">{% trans "Already have an account?" %} <a href="{% url 'login' %}">{% trans "Sign in" %}</a></p>
+{% endblock %}

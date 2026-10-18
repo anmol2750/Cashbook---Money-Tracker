@@ -1,0 +1,16 @@
+{% load static i18n %}
+<!doctype html>
+<html lang="{{ request.LANGUAGE_CODE|default:'en' }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% trans "Welcome" %}{% endblock %} · Cashbook</title>
+  <link rel="stylesheet" href="{% static 'cashbook/app.css' %}">
+</head>
+<body class="auth-body">
+  <a class="brand auth-brand" href="{% url 'login' %}"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.75A2.75 2.75 0 0 1 7.75 2H20v17H7.75A2.75 2.75 0 0 0 5 21.75v-17Z"/><path d="M5 5h12M9 8h5M9 12h7"/></svg></span><span>cashbook<span class="brand-period">.</span></span></a>
+  <div class="auth-layout">
+    <section class="auth-story"><div class="story-orbit orbit-one"></div><div class="story-orbit orbit-two"></div><div class="story-content"><span class="eyebrow light-eyebrow">{% trans "A little more clarity" %}</span><h1>{% trans "Make room for" %}<br><em>{% trans "what matters." %}</em></h1><p>{% trans "A simple place to see where your money goes, and where it takes you." %}</p><div class="story-bottom"><span class="story-line"></span><span>{% trans "One clear view of your everyday money." %}</span></div></div></section>
+    <main class="auth-panel"><div class="auth-card">{% block auth_content %}{% endblock %}</div><p class="auth-legal">{% trans "Your cashbook is private to you." %}</p></main>
+  </div>
+</body>
+</html>
