@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: as\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "কৰ্মক্ষেত্ৰ"
+
+msgid "Overview"
+msgstr "সাৰাংশ"
+
+msgid "Transactions"
+msgstr "লেনদেন"
+
+msgid "Notes"
+msgstr "টোকা"
+
+msgid "Calendar"
+msgstr "পঞ্জিকা"
+
+msgid "Cash calculator"
+msgstr "নগদ গণক"
+
+msgid "PREFERENCES"
+msgstr "পছন্দসমূহ"
+
+msgid "Settings"
+msgstr "ছেটিংছ"
+
+msgid "About"
+msgstr "বিষয়ে"
+
+msgid "About Cashbook"
+msgstr "কেছবুকৰ বিষয়ে"
+
+msgid "Sign out"
+msgstr "ছাইন আউট"
+
+msgid "Profile"
+msgstr "প্ৰ'ফাইল"
+
+msgid "Language"
+msgstr "ভাষা"
+
+msgid "Choose the language used across your cashbook."
+msgstr "আপোনাৰ কেছবুকত ব্যৱহৃত ভাষা বাছনি কৰক।"
+
+msgid "Display language"
+msgstr "প্ৰদৰ্শনৰ ভাষা"
+
+msgid "Save language"
+msgstr "ভাষা সংৰক্ষণ কৰক"
+
+msgid "Cash in"
+msgstr "নগদ জমা"
+
+msgid "Cash out"
+msgstr "নগদ খৰচ"
+
+msgid "Daily"
+msgstr "দৈনিক"
+
+msgid "Weekly"
+msgstr "সাপ্তাহিক"
+
+msgid "Monthly"
+msgstr "মাহেকীয়া"
+
+msgid "Yearly"
+msgstr "বাৰ্ষিক"
+
+msgid "Apply"
+msgstr "প্ৰয়োগ কৰক"
+
+msgid "Clear"
+msgstr "পৰিষ্কাৰ কৰক"
+
+msgid "Cancel"
+msgstr "বাতিল"
+
+msgid "Add transaction"
+msgstr "লেনদেন যোগ কৰক"
+
+msgid "Save transaction"
+msgstr "লেনদেন সংৰক্ষণ কৰক"
+
+msgid "Amount"
+msgstr "পৰিমাণ"
+
+msgid "Category"
+msgstr "শ্ৰেণী"
+
+msgid "Description"
+msgstr "বিৱৰণ"
+
+msgid "Date"
+msgstr "তাৰিখ"

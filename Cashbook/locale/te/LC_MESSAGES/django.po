@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: te\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "పని ప్రదేశం"
+
+msgid "Overview"
+msgstr "సారాంశం"
+
+msgid "Transactions"
+msgstr "లావాదేవీలు"
+
+msgid "Notes"
+msgstr "గమనికలు"
+
+msgid "Calendar"
+msgstr "క్యాలెండర్"
+
+msgid "Cash calculator"
+msgstr "నగదు కాలిక్యులేటర్"
+
+msgid "PREFERENCES"
+msgstr "ప్రాధాన్యతలు"
+
+msgid "Settings"
+msgstr "సెట్టింగ్‌లు"
+
+msgid "About"
+msgstr "గురించి"
+
+msgid "About Cashbook"
+msgstr "క్యాష్‌బుక్ గురించి"
+
+msgid "Sign out"
+msgstr "సైన్ అవుట్"
+
+msgid "Profile"
+msgstr "ప్రొఫైల్"
+
+msgid "Language"
+msgstr "భాష"
+
+msgid "Choose the language used across your cashbook."
+msgstr "మీ క్యాష్‌బుక్‌లో ఉపయోగించే భాషను ఎంచుకోండి."
+
+msgid "Display language"
+msgstr "ప్రదర్శన భాష"
+
+msgid "Save language"
+msgstr "భాషను సేవ్ చేయండి"
+
+msgid "Cash in"
+msgstr "నగదు జమ"
+
+msgid "Cash out"
+msgstr "నగదు ఖర్చు"
+
+msgid "Daily"
+msgstr "రోజువారీ"
+
+msgid "Weekly"
+msgstr "వారానికొకసారి"
+
+msgid "Monthly"
+msgstr "నెలవారీ"
+
+msgid "Yearly"
+msgstr "సంవత్సరానికి"
+
+msgid "Apply"
+msgstr "వర్తింపజేయండి"
+
+msgid "Clear"
+msgstr "తొలగించండి"
+
+msgid "Cancel"
+msgstr "రద్దు చేయండి"
+
+msgid "Add transaction"
+msgstr "లావాదేవీని జోడించండి"
+
+msgid "Save transaction"
+msgstr "లావాదేవీని సేవ్ చేయండి"
+
+msgid "Amount"
+msgstr "మొత్తం"
+
+msgid "Category"
+msgstr "వర్గం"
+
+msgid "Description"
+msgstr "వివరణ"
+
+msgid "Date"
+msgstr "తేదీ"

@@ -740,3 +740,75 @@ msgstr "मुद्रा प्रारूप सहेजें"
 
 msgid "Your currency format preference has been saved."
 msgstr "आपकी मुद्रा प्रारूप पसंद सहेज ली गई है।"
+
+msgid "Calculator"
+msgstr "कैलकुलेटर"
+
+msgid "QUICK CALCULATIONS"
+msgstr "जल्दी गणना"
+
+msgid "A simple calculator for everyday arithmetic."
+msgstr "रोज़मर्रा की गणना के लिए एक सरल कैलकुलेटर।"
+
+msgid "Clear all"
+msgstr "सब मिटाएँ"
+
+msgid "Change sign"
+msgstr "चिह्न बदलें"
+
+msgid "Percent"
+msgstr "प्रतिशत"
+
+msgid "Divide"
+msgstr "भाग"
+
+msgid "Multiply"
+msgstr "गुणा"
+
+msgid "Subtract"
+msgstr "घटाएँ"
+
+msgid "Add"
+msgstr "जोड़ें"
+
+msgid "Decimal point"
+msgstr "दशमलव बिंदु"
+
+msgid "Equals"
+msgstr "बराबर"
+
+msgid "Keyboard input is supported."
+msgstr "कीबोर्ड से भी इनपुट कर सकते हैं।"
+
+msgid "About"
+msgstr "परिचय"
+
+msgid "About Cashbook"
+msgstr "कैशबुक के बारे में"
+
+msgid "Date format"
+msgstr "दिनांक प्रारूप"
+
+msgid "Date display"
+msgstr "दिनांक प्रदर्शन"
+
+msgid "DD/MM/YYYY (day/month/year)"
+msgstr "DD/MM/YYYY (दिन/महीना/वर्ष)"
+
+msgid "MM/DD/YYYY (month/day/year)"
+msgstr "MM/DD/YYYY (महीना/दिन/वर्ष)"
+
+msgid "YYYY-MM-DD (year-month-day)"
+msgstr "YYYY-MM-DD (वर्ष-महीना-दिन)"
+
+msgid "Choose how dates appear throughout your cashbook."
+msgstr "चुनें कि आपकी कैशबुक में तारीखें किस तरह दिखाई दें।"
+
+msgid "Example: 31/12/2026, 12/31/2026, or 2026-12-31."
+msgstr "उदाहरण: 31/12/2026, 12/31/2026, या 2026-12-31।"
+
+msgid "Save date format"
+msgstr "दिनांक प्रारूप सहेजें"
+
+msgid "Your date format preference has been saved."
+msgstr "आपकी दिनांक प्रारूप प्राथमिकता सहेज दी गई है।"

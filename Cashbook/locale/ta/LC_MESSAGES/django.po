@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ta\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "பணியிடம்"
+
+msgid "Overview"
+msgstr "கண்ணோட்டம்"
+
+msgid "Transactions"
+msgstr "பரிவர்த்தனைகள்"
+
+msgid "Notes"
+msgstr "குறிப்புகள்"
+
+msgid "Calendar"
+msgstr "நாள்காட்டி"
+
+msgid "Cash calculator"
+msgstr "பணக் கணிப்பான்"
+
+msgid "PREFERENCES"
+msgstr "விருப்பங்கள்"
+
+msgid "Settings"
+msgstr "அமைப்புகள்"
+
+msgid "About"
+msgstr "பற்றி"
+
+msgid "About Cashbook"
+msgstr "பணப் பதிவேட்டைப் பற்றி"
+
+msgid "Sign out"
+msgstr "வெளியேறு"
+
+msgid "Profile"
+msgstr "சுயவிவரம்"
+
+msgid "Language"
+msgstr "மொழி"
+
+msgid "Choose the language used across your cashbook."
+msgstr "உங்கள் பணப் பதிவேட்டில் பயன்படுத்தப்படும் மொழியைத் தேர்ந்தெடுக்கவும்."
+
+msgid "Display language"
+msgstr "காட்சி மொழி"
+
+msgid "Save language"
+msgstr "மொழியைச் சேமி"
+
+msgid "Cash in"
+msgstr "பணம் வரவு"
+
+msgid "Cash out"
+msgstr "பணம் செலவு"
+
+msgid "Daily"
+msgstr "தினசரி"
+
+msgid "Weekly"
+msgstr "வாராந்திரம்"
+
+msgid "Monthly"
+msgstr "மாதாந்திரம்"
+
+msgid "Yearly"
+msgstr "ஆண்டுதோறும்"
+
+msgid "Apply"
+msgstr "பயன்படுத்து"
+
+msgid "Clear"
+msgstr "அழி"
+
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+msgid "Add transaction"
+msgstr "பரிவர்த்தனையைச் சேர்"
+
+msgid "Save transaction"
+msgstr "பரிவர்த்தனையைச் சேமி"
+
+msgid "Amount"
+msgstr "தொகை"
+
+msgid "Category"
+msgstr "வகை"
+
+msgid "Description"
+msgstr "விவரம்"
+
+msgid "Date"
+msgstr "தேதி"

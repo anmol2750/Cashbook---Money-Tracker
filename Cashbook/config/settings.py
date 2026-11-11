@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-cashbook-development-key-change-before-deploying"
@@ -43,7 +44,24 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 LANGUAGE_CODE = "en"
-LANGUAGES = [("en", "English"), ("hi", "हिन्दी")]
+LANGUAGES = [
+    ("en", "English"),
+    ("hi", "हिन्दी"),
+    ("as", "অসমীয়া"),
+    ("bn", "বাংলা"),
+    ("gu", "ગુજરાતી"),
+    ("kn", "ಕನ್ನಡ"),
+    ("ks", "کٲشُر"),
+    ("ml", "മലയാളം"),
+    ("mr", "मराठी"),
+    ("ne", "नेपाली"),
+    ("or", "ଓଡ଼ିଆ"),
+    ("pa", "ਪੰਜਾਬੀ"),
+    ("sa", "संस्कृतम्"),
+    ("ta", "தமிழ்"),
+    ("te", "తెలుగు"),
+    ("ur", "اردو"),
+]
 LOCALE_PATHS = [BASE_DIR / "locale"]
 TIME_ZONE = "Asia/Kolkata"
 USE_I18N = True
@@ -51,6 +69,21 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+DEFAULT_EMAIL_BACKEND = (
+    "django.core.mail.backends.smtp.EmailBackend"
+    if not DEBUG or os.environ.get("EMAIL_HOST")
+    else "django.core.mail.backends.console.EmailBackend"
+)
+EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND", DEFAULT_EMAIL_BACKEND)
+EMAIL_HOST = os.environ.get("EMAIL_HOST", "localhost")
+EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "25"))
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "").strip().lower() in {"1", "true", "yes"}
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "Cashbook <noreply@localhost>")
+EMAIL_VERIFICATION_OTP_TTL_SECONDS = int(os.environ.get("EMAIL_VERIFICATION_OTP_TTL_SECONDS", "600"))
+EMAIL_VERIFICATION_RESEND_COOLDOWN_SECONDS = int(os.environ.get("EMAIL_VERIFICATION_RESEND_COOLDOWN_SECONDS", "60"))
+EMAIL_VERIFICATION_MAX_ATTEMPTS = int(os.environ.get("EMAIL_VERIFICATION_MAX_ATTEMPTS", "5"))
 LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "dashboard"
 LOGOUT_REDIRECT_URL = "login"

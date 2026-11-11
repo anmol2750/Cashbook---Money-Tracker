@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: mr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "कार्य क्षेत्र"
+
+msgid "Overview"
+msgstr "आढावा"
+
+msgid "Transactions"
+msgstr "व्यवहार"
+
+msgid "Notes"
+msgstr "नोंदी"
+
+msgid "Calendar"
+msgstr "दिनदर्शिका"
+
+msgid "Cash calculator"
+msgstr "रोख मोजणी"
+
+msgid "PREFERENCES"
+msgstr "प्राधान्ये"
+
+msgid "Settings"
+msgstr "सेटिंग्ज"
+
+msgid "About"
+msgstr "बद्दल"
+
+msgid "About Cashbook"
+msgstr "कॅशबुकबद्दल"
+
+msgid "Sign out"
+msgstr "साइन आउट"
+
+msgid "Profile"
+msgstr "प्रोफाइल"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Choose the language used across your cashbook."
+msgstr "तुमच्या कॅशबुकमध्ये वापरली जाणारी भाषा निवडा."
+
+msgid "Display language"
+msgstr "प्रदर्शन भाषा"
+
+msgid "Save language"
+msgstr "भाषा जतन करा"
+
+msgid "Cash in"
+msgstr "रोख जमा"
+
+msgid "Cash out"
+msgstr "रोख खर्च"
+
+msgid "Daily"
+msgstr "दैनिक"
+
+msgid "Weekly"
+msgstr "साप्ताहिक"
+
+msgid "Monthly"
+msgstr "मासिक"
+
+msgid "Yearly"
+msgstr "वार्षिक"
+
+msgid "Apply"
+msgstr "लागू करा"
+
+msgid "Clear"
+msgstr "पुसून टाका"
+
+msgid "Cancel"
+msgstr "रद्द करा"
+
+msgid "Add transaction"
+msgstr "व्यवहार जोडा"
+
+msgid "Save transaction"
+msgstr "व्यवहार जतन करा"
+
+msgid "Amount"
+msgstr "रक्कम"
+
+msgid "Category"
+msgstr "प्रकार"
+
+msgid "Description"
+msgstr "तपशील"
+
+msgid "Date"
+msgstr "तारीख"

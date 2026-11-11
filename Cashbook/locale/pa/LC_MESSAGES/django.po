@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pa\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "ਕਾਰਜ-ਖੇਤਰ"
+
+msgid "Overview"
+msgstr "ਸੰਖੇਪ"
+
+msgid "Transactions"
+msgstr "ਲੈਣ-ਦੇਣ"
+
+msgid "Notes"
+msgstr "ਨੋਟਸ"
+
+msgid "Calendar"
+msgstr "ਕੈਲੰਡਰ"
+
+msgid "Cash calculator"
+msgstr "ਨਕਦੀ ਕੈਲਕੁਲੇਟਰ"
+
+msgid "PREFERENCES"
+msgstr "ਤਰਜੀਹਾਂ"
+
+msgid "Settings"
+msgstr "ਸੈਟਿੰਗਾਂ"
+
+msgid "About"
+msgstr "ਬਾਰੇ"
+
+msgid "About Cashbook"
+msgstr "ਕੈਸ਼ਬੁੱਕ ਬਾਰੇ"
+
+msgid "Sign out"
+msgstr "ਸਾਈਨ ਆਉਟ"
+
+msgid "Profile"
+msgstr "ਪ੍ਰੋਫ਼ਾਈਲ"
+
+msgid "Language"
+msgstr "ਭਾਸ਼ਾ"
+
+msgid "Choose the language used across your cashbook."
+msgstr "ਆਪਣੀ ਕੈਸ਼ਬੁੱਕ ਵਿੱਚ ਵਰਤੀ ਜਾਣ ਵਾਲੀ ਭਾਸ਼ਾ ਚੁਣੋ।"
+
+msgid "Display language"
+msgstr "ਦਿਖਾਉਣ ਦੀ ਭਾਸ਼ਾ"
+
+msgid "Save language"
+msgstr "ਭਾਸ਼ਾ ਸੰਭਾਲੋ"
+
+msgid "Cash in"
+msgstr "ਨਕਦੀ ਜਮ੍ਹਾਂ"
+
+msgid "Cash out"
+msgstr "ਨਕਦੀ ਖਰਚ"
+
+msgid "Daily"
+msgstr "ਰੋਜ਼ਾਨਾ"
+
+msgid "Weekly"
+msgstr "ਹਫ਼ਤਾਵਾਰੀ"
+
+msgid "Monthly"
+msgstr "ਮਹੀਨਾਵਾਰ"
+
+msgid "Yearly"
+msgstr "ਸਾਲਾਨਾ"
+
+msgid "Apply"
+msgstr "ਲਾਗੂ ਕਰੋ"
+
+msgid "Clear"
+msgstr "ਸਾਫ਼ ਕਰੋ"
+
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+msgid "Add transaction"
+msgstr "ਲੈਣ-ਦੇਣ ਜੋੜੋ"
+
+msgid "Save transaction"
+msgstr "ਲੈਣ-ਦੇਣ ਸੰਭਾਲੋ"
+
+msgid "Amount"
+msgstr "ਰਕਮ"
+
+msgid "Category"
+msgstr "ਸ਼੍ਰੇਣੀ"
+
+msgid "Description"
+msgstr "ਵੇਰਵਾ"
+
+msgid "Date"
+msgstr "ਤਾਰੀਖ"

@@ -28,7 +28,24 @@ class UserManager(BaseUserManager):
 class User(AbstractUser):
     username = None
     email = models.EmailField("email address", unique=True)
-    LANGUAGE_CHOICES = [("en", _("English")), ("hi", _("Hindi (हिन्दी)"))]
+    LANGUAGE_CHOICES = [
+        ("en", "English"),
+        ("hi", "हिन्दी"),
+        ("as", "অসমীয়া"),
+        ("bn", "বাংলা"),
+        ("gu", "ગુજરાતી"),
+        ("kn", "ಕನ್ನಡ"),
+        ("ks", "کٲشُر"),
+        ("ml", "മലയാളം"),
+        ("mr", "मराठी"),
+        ("ne", "नेपाली"),
+        ("or", "ଓଡ଼ିଆ"),
+        ("pa", "ਪੰਜਾਬੀ"),
+        ("sa", "संस्कृतम्"),
+        ("ta", "தமிழ்"),
+        ("te", "తెలుగు"),
+        ("ur", "اردو"),
+    ]
     CURRENCY_CHOICES = [
         ("INR", _("Indian Rupee (₹)")), ("USD", _("US Dollar ($)")), ("EUR", _("Euro (€)")),
         ("GBP", _("British Pound (£)")), ("CAD", _("Canadian Dollar (C$)")), ("AUD", _("Australian Dollar (A$)")),
@@ -36,6 +53,12 @@ class User(AbstractUser):
     currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES, default="INR")
     language = models.CharField(max_length=5, choices=LANGUAGE_CHOICES, default="en")
     dark_mode = models.BooleanField(default=False)
+    DATE_FORMAT_CHOICES = [
+        ("dmy", _("DD/MM/YYYY (day/month/year)")),
+        ("mdy", _("MM/DD/YYYY (month/day/year)")),
+        ("ymd", _("YYYY-MM-DD (year-month-day)")),
+    ]
+    date_format = models.CharField(max_length=3, choices=DATE_FORMAT_CHOICES, default="dmy")
     TIME_FORMAT_CHOICES = [("12h", _("12-hour")), ("24h", _("24-hour"))]
     CURRENCY_FORMAT_CHOICES = [("symbol", _("Currency symbol")), ("code", _("Currency code"))]
     time_format = models.CharField(max_length=3, choices=TIME_FORMAT_CHOICES, default="12h")
@@ -53,11 +76,39 @@ class User(AbstractUser):
     def __str__(self):
         return self.email
 
+class EmailVerificationCode(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="email_verification_code")
+    code_hash = models.CharField(max_length=128)
+    expires_at = models.DateTimeField()
+    attempts = models.PositiveSmallIntegerField(default=0)
+    last_sent_at = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Email verification for {self.user.email}"
+
+class TransactionAccount(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="transaction_accounts")
+    name = models.CharField(max_length=80)
+    currency = models.CharField(max_length=3, choices=User.CURRENCY_CHOICES, default="INR")
+    is_default = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-is_default", "name", "id"]
+        constraints = [
+            models.UniqueConstraint(fields=("user", "name"), name="unique_transaction_account_name"),
+        ]
+
+    def __str__(self):
+        return f"{self.name} ({self.currency})"
+
 class Transaction(models.Model):
     INCOME = "income"
     EXPENSE = "expense"
     TYPE_CHOICES = [(INCOME, _("Cash in")), (EXPENSE, _("Cash out"))]
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="transactions")
+    account = models.ForeignKey("TransactionAccount", on_delete=models.CASCADE, related_name="transactions")
     kind = models.CharField(max_length=8, choices=TYPE_CHOICES)
     amount = models.DecimalField(max_digits=12, decimal_places=2, validators=[MinValueValidator(Decimal("0.01"))])
     category = models.CharField(max_length=60, default="General")

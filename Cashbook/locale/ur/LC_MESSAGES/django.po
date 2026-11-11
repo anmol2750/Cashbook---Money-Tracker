@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ur\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "کام کی جگہ"
+
+msgid "Overview"
+msgstr "جائزہ"
+
+msgid "Transactions"
+msgstr "لین دین"
+
+msgid "Notes"
+msgstr "نوٹس"
+
+msgid "Calendar"
+msgstr "کیلنڈر"
+
+msgid "Cash calculator"
+msgstr "نقد کیلکولیٹر"
+
+msgid "PREFERENCES"
+msgstr "ترجیحات"
+
+msgid "Settings"
+msgstr "ترتیبات"
+
+msgid "About"
+msgstr "کے بارے میں"
+
+msgid "About Cashbook"
+msgstr "کیش بک کے بارے میں"
+
+msgid "Sign out"
+msgstr "سائن آؤٹ"
+
+msgid "Profile"
+msgstr "پروفائل"
+
+msgid "Language"
+msgstr "زبان"
+
+msgid "Choose the language used across your cashbook."
+msgstr "اپنی کیش بک میں استعمال ہونے والی زبان منتخب کریں۔"
+
+msgid "Display language"
+msgstr "دکھانے کی زبان"
+
+msgid "Save language"
+msgstr "زبان محفوظ کریں"
+
+msgid "Cash in"
+msgstr "نقد آمد"
+
+msgid "Cash out"
+msgstr "نقد خرچ"
+
+msgid "Daily"
+msgstr "روزانہ"
+
+msgid "Weekly"
+msgstr "ہفتہ وار"
+
+msgid "Monthly"
+msgstr "ماہانہ"
+
+msgid "Yearly"
+msgstr "سالانہ"
+
+msgid "Apply"
+msgstr "لاگو کریں"
+
+msgid "Clear"
+msgstr "صاف کریں"
+
+msgid "Cancel"
+msgstr "منسوخ کریں"
+
+msgid "Add transaction"
+msgstr "لین دین شامل کریں"
+
+msgid "Save transaction"
+msgstr "لین دین محفوظ کریں"
+
+msgid "Amount"
+msgstr "رقم"
+
+msgid "Category"
+msgstr "زمرہ"
+
+msgid "Description"
+msgstr "تفصیل"
+
+msgid "Date"
+msgstr "تاریخ"

@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: kn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "ಕಾರ್ಯಕ್ಷೇತ್ರ"
+
+msgid "Overview"
+msgstr "ಅವಲೋಕನ"
+
+msgid "Transactions"
+msgstr "ವಹಿವಾಟುಗಳು"
+
+msgid "Notes"
+msgstr "ಟಿಪ್ಪಣಿಗಳು"
+
+msgid "Calendar"
+msgstr "ಕ್ಯಾಲೆಂಡರ್"
+
+msgid "Cash calculator"
+msgstr "ನಗದು ಕ್ಯಾಲ್ಕುಲೇಟರ್"
+
+msgid "PREFERENCES"
+msgstr "ಆದ್ಯತೆಗಳು"
+
+msgid "Settings"
+msgstr "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+
+msgid "About"
+msgstr "ಬಗ್ಗೆ"
+
+msgid "About Cashbook"
+msgstr "ಕ್ಯಾಶ್‌ಬುಕ್ ಬಗ್ಗೆ"
+
+msgid "Sign out"
+msgstr "ಸೈನ್ ಔಟ್"
+
+msgid "Profile"
+msgstr "ಪ್ರೊಫೈಲ್"
+
+msgid "Language"
+msgstr "ಭಾಷೆ"
+
+msgid "Choose the language used across your cashbook."
+msgstr "ನಿಮ್ಮ ಕ್ಯಾಶ್‌ಬುಕ್‌ನಲ್ಲಿ ಬಳಸುವ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+
+msgid "Display language"
+msgstr "ಪ್ರದರ್ಶನ ಭಾಷೆ"
+
+msgid "Save language"
+msgstr "ಭಾಷೆಯನ್ನು ಉಳಿಸಿ"
+
+msgid "Cash in"
+msgstr "ನಗದು ಜಮೆ"
+
+msgid "Cash out"
+msgstr "ನಗದು ಖರ್ಚು"
+
+msgid "Daily"
+msgstr "ದೈನಿಕ"
+
+msgid "Weekly"
+msgstr "ಸಾಪ್ತಾಹಿಕ"
+
+msgid "Monthly"
+msgstr "ಮಾಸಿಕ"
+
+msgid "Yearly"
+msgstr "ವಾರ್ಷಿಕ"
+
+msgid "Apply"
+msgstr "ಅನ್ವಯಿಸಿ"
+
+msgid "Clear"
+msgstr "ಅಳಿಸಿ"
+
+msgid "Cancel"
+msgstr "ರದ್ದುಮಾಡಿ"
+
+msgid "Add transaction"
+msgstr "ವಹಿವಾಟು ಸೇರಿಸಿ"
+
+msgid "Save transaction"
+msgstr "ವಹಿವಾಟನ್ನು ಉಳಿಸಿ"
+
+msgid "Amount"
+msgstr "ಮೊತ್ತ"
+
+msgid "Category"
+msgstr "ವರ್ಗ"
+
+msgid "Description"
+msgstr "ವಿವರಣೆ"
+
+msgid "Date"
+msgstr "ದಿನಾಂಕ"

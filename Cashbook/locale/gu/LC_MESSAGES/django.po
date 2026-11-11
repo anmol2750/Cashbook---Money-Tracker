@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: gu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "કાર્યસ્થળ"
+
+msgid "Overview"
+msgstr "ઝાંખી"
+
+msgid "Transactions"
+msgstr "વ્યવહારો"
+
+msgid "Notes"
+msgstr "નોંધો"
+
+msgid "Calendar"
+msgstr "કૅલેન્ડર"
+
+msgid "Cash calculator"
+msgstr "રોકડ ગણક"
+
+msgid "PREFERENCES"
+msgstr "પસંદગીઓ"
+
+msgid "Settings"
+msgstr "સેટિંગ્સ"
+
+msgid "About"
+msgstr "વિશે"
+
+msgid "About Cashbook"
+msgstr "કેશબુક વિશે"
+
+msgid "Sign out"
+msgstr "સાઇન આઉટ"
+
+msgid "Profile"
+msgstr "પ્રોફાઇલ"
+
+msgid "Language"
+msgstr "ભાષા"
+
+msgid "Choose the language used across your cashbook."
+msgstr "તમારી કેશબુકમાં વપરાતી ભાષા પસંદ કરો."
+
+msgid "Display language"
+msgstr "પ્રદર્શન ભાષા"
+
+msgid "Save language"
+msgstr "ભાષા સાચવો"
+
+msgid "Cash in"
+msgstr "રોકડ આવક"
+
+msgid "Cash out"
+msgstr "રોકડ જાવક"
+
+msgid "Daily"
+msgstr "દૈનિક"
+
+msgid "Weekly"
+msgstr "સાપ્તાહિક"
+
+msgid "Monthly"
+msgstr "માસિક"
+
+msgid "Yearly"
+msgstr "વાર્ષિક"
+
+msgid "Apply"
+msgstr "લાગુ કરો"
+
+msgid "Clear"
+msgstr "સાફ કરો"
+
+msgid "Cancel"
+msgstr "રદ કરો"
+
+msgid "Add transaction"
+msgstr "વ્યવહાર ઉમેરો"
+
+msgid "Save transaction"
+msgstr "વ્યવહાર સાચવો"
+
+msgid "Amount"
+msgstr "રકમ"
+
+msgid "Category"
+msgstr "શ્રેણી"
+
+msgid "Description"
+msgstr "વર્ણન"
+
+msgid "Date"
+msgstr "તારીખ"

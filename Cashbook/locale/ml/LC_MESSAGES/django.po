@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ml\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "പ്രവർത്തനമേഖല"
+
+msgid "Overview"
+msgstr "അവലോകനം"
+
+msgid "Transactions"
+msgstr "ഇടപാടുകൾ"
+
+msgid "Notes"
+msgstr "കുറിപ്പുകൾ"
+
+msgid "Calendar"
+msgstr "കലണ്ടർ"
+
+msgid "Cash calculator"
+msgstr "ക്യാഷ് കാൽക്കുലേറ്റർ"
+
+msgid "PREFERENCES"
+msgstr "മുൻഗണനകൾ"
+
+msgid "Settings"
+msgstr "ക്രമീകരണങ്ങൾ"
+
+msgid "About"
+msgstr "വിവരം"
+
+msgid "About Cashbook"
+msgstr "ക്യാഷ്ബുക്കിനെക്കുറിച്ച്"
+
+msgid "Sign out"
+msgstr "പുറത്തുകടക്കുക"
+
+msgid "Profile"
+msgstr "പ്രൊഫൈൽ"
+
+msgid "Language"
+msgstr "ഭാഷ"
+
+msgid "Choose the language used across your cashbook."
+msgstr "നിങ്ങളുടെ ക്യാഷ്ബുക്കിൽ ഉപയോഗിക്കേണ്ട ഭാഷ തിരഞ്ഞെടുക്കുക."
+
+msgid "Display language"
+msgstr "പ്രദർശന ഭാഷ"
+
+msgid "Save language"
+msgstr "ഭാഷ സംരക്ഷിക്കുക"
+
+msgid "Cash in"
+msgstr "പണം വരവ്"
+
+msgid "Cash out"
+msgstr "പണം ചെലവ്"
+
+msgid "Daily"
+msgstr "ദിവസേന"
+
+msgid "Weekly"
+msgstr "പ്രതിവാരം"
+
+msgid "Monthly"
+msgstr "പ്രതിമാസം"
+
+msgid "Yearly"
+msgstr "വർഷംതോറും"
+
+msgid "Apply"
+msgstr "പ്രയോഗിക്കുക"
+
+msgid "Clear"
+msgstr "മായ്ക്കുക"
+
+msgid "Cancel"
+msgstr "റദ്ദാക്കുക"
+
+msgid "Add transaction"
+msgstr "ഇടപാട് ചേർക്കുക"
+
+msgid "Save transaction"
+msgstr "ഇടപാട് സംരക്ഷിക്കുക"
+
+msgid "Amount"
+msgstr "തുക"
+
+msgid "Category"
+msgstr "വിഭാഗം"
+
+msgid "Description"
+msgstr "വിവരണം"
+
+msgid "Date"
+msgstr "തീയതി"

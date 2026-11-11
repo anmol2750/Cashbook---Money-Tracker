@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: sa\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "WORKSPACE"
+msgstr "कार्यक्षेत्रम्"
+
+msgid "Overview"
+msgstr "सारांशः"
+
+msgid "Transactions"
+msgstr "व्यवहाराः"
+
+msgid "Notes"
+msgstr "टिप्पण्यः"
+
+msgid "Calendar"
+msgstr "पञ्चाङ्गम्"
+
+msgid "Cash calculator"
+msgstr "धनगणकम्"
+
+msgid "PREFERENCES"
+msgstr "प्राथमिकताः"
+
+msgid "Settings"
+msgstr "व्यवस्थाः"
+
+msgid "About"
+msgstr "विषये"
+
+msgid "About Cashbook"
+msgstr "लेखापुस्तकविषये"
+
+msgid "Sign out"
+msgstr "निर्गच्छतु"
+
+msgid "Profile"
+msgstr "परिचयः"
+
+msgid "Language"
+msgstr "भाषा"
+
+msgid "Choose the language used across your cashbook."
+msgstr "भवतः लेखापुस्तके प्रयुक्तां भाषां चिनोतु।"
+
+msgid "Display language"
+msgstr "प्रदर्शनभाषा"
+
+msgid "Save language"
+msgstr "भाषां रक्षतु"
+
+msgid "Cash in"
+msgstr "धनागमः"
+
+msgid "Cash out"
+msgstr "धनव्ययः"
+
+msgid "Daily"
+msgstr "प्रतिदिनम्"
+
+msgid "Weekly"
+msgstr "प्रतिसप्ताहम्"
+
+msgid "Monthly"
+msgstr "प्रतिमासम्"
+
+msgid "Yearly"
+msgstr "प्रतिवर्षम्"
+
+msgid "Apply"
+msgstr "प्रयुङ्क्ताम्"
+
+msgid "Clear"
+msgstr "अपनयतु"
+
+msgid "Cancel"
+msgstr "निरस्यतु"
+
+msgid "Add transaction"
+msgstr "व्यवहारं योजयतु"
+
+msgid "Save transaction"
+msgstr "व्यवहारं रक्षतु"
+
+msgid "Amount"
+msgstr "राशिः"
+
+msgid "Category"
+msgstr "वर्गः"
+
+msgid "Description"
+msgstr "विवरणम्"
+
+msgid "Date"
+msgstr "तिथिः"
