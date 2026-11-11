@@ -1,0 +1,28 @@
+{% extends "cashbook/base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Currency converter" %}{% endblock %}
+{% block content %}
+  <div class="page-heading cash-heading">
+    <div><span class="eyebrow">{% trans "CURRENCY TOOLS" %}</span><h1>{% trans "Currency converter" %}</h1><p>{% trans "Convert an amount using the latest available exchange rate." %}</p></div>
+  </div>
+  <div class="currency-converter-layout">
+    <section class="panel currency-converter-card" data-currency-converter data-api-base="https://api.frankfurter.dev/v2" data-locale="{{ request.LANGUAGE_CODE|default:'en' }}" data-loading-message="{% trans 'Getting the latest exchange rate…' %}" data-error-message="{% trans 'Could not load this exchange rate. Check your connection and try again.' %}" data-rate-date-label="{% trans 'Rate date' %}" aria-label="{% trans 'Currency converter' %}">
+      <form class="currency-converter-form" data-converter-form>
+        <label class="field converter-amount-field" for="converter-amount"><span>{% trans "Amount" %}</span><input class="input" id="converter-amount" data-converter-amount type="number" min="0.000001" step="any" value="1" required inputmode="decimal"></label>
+        <div class="currency-pair">
+          <label class="field" for="converter-from"><span>{% trans "From currency" %}</span><select class="input" id="converter-from" data-currency-from>{% for currency in currencies %}<option value="{{ currency.code }}"{% if currency.code == transaction_currency %} selected{% endif %}>{{ currency.name }} ({{ currency.code }})</option>{% endfor %}</select></label>
+          <button class="currency-swap" type="button" data-currency-swap aria-label="{% trans 'Swap currencies' %}" title="{% trans 'Swap currencies' %}">⇄</button>
+          <label class="field" for="converter-to"><span>{% trans "To currency" %}</span><select class="input" id="converter-to" data-currency-to>{% for currency in currencies %}<option value="{{ currency.code }}"{% if currency.code == target_currency %} selected{% endif %}>{{ currency.name }} ({{ currency.code }})</option>{% endfor %}</select></label>
+        </div>
+        <button class="button button-primary converter-submit" type="submit" data-convert-button>{% trans "Convert currency" %}<span aria-hidden="true">→</span></button>
+      </form>
+      <div class="currency-conversion-result" aria-live="polite">
+        <span class="summary-label">{% trans "Converted amount" %}</span>
+        <output data-conversion-result>—</output>
+        <p data-rate-details role="status">{% trans "Your converted amount will appear here." %}</p>
+      </div>
+      <p class="currency-converter-note">{% trans "The exchange rate date is shown with each conversion." %}</p>
+    </section>
+  </div>
+{% endblock %}
+{% block scripts %}<script src="{% static 'cashbook/currency_converter.js' %}?v=20261019" defer></script>{% endblock %}

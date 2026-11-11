@@ -1,0 +1,9 @@
+{% extends "cashbook/auth/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Email verified" %}{% endblock %}
+{% block auth_content %}
+  <span class="eyebrow">{% trans "EMAIL VERIFIED" %}</span>
+  <h2>{% trans "Your account is ready" %}</h2>
+  <p class="auth-subtitle">{% trans "Your email address is verified. Sign in to start using Cashbook." %}</p>
+  <a class="button button-primary button-wide" href="{% url 'login' %}">{% trans "Sign in" %} <span aria-hidden="true">→</span></a>
+{% endblock %}

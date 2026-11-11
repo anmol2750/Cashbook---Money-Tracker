@@ -1,0 +1,7 @@
+{% extends "cashbook/base.html" %}
+{% load i18n %}
+{% block title %}{% translate title %}{% endblock %}
+{% block content %}
+  <div class="page-heading"><div><a class="back-link" href="{{ cancel_url }}">← {% trans "Back" %}</a><span class="eyebrow">{% trans "PLEASE CONFIRM" %}</span><h1>{% translate title %}</h1></div></div>
+  <section class="panel confirm-panel"><span class="confirm-icon">!</span><p>{% trans "Are you sure you want to remove" %} <strong>{{ object_label }}</strong>? {% trans "This action can’t be undone." %}</p><form method="post">{% csrf_token %}<div class="form-actions"><a class="button button-secondary" href="{{ cancel_url }}">{% trans "Keep it" %}</a><button class="button button-danger" type="submit">{% trans "Delete" %}</button></div></form></section>
+{% endblock %}

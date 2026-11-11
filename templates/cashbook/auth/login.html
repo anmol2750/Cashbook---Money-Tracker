@@ -1,0 +1,17 @@
+{% extends "cashbook/auth/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Sign in" %}{% endblock %}
+{% block auth_content %}
+  <span class="eyebrow">{% trans "WELCOME BACK" %}</span>
+  <h2>{% trans "Sign in to Cashbook" %}</h2>
+  <p class="auth-subtitle">{% trans "Your day-to-day money, all in one place. Verify your email address before signing in." %}</p>
+  {% if form.non_field_errors %}<div class="form-errors">{{ form.non_field_errors }}</div>{% endif %}
+  <form method="post" class="stack-form">{% csrf_token %}
+    <div class="field"><label for="{{ form.username.id_for_label }}">{% trans "Email address" %}</label>{{ form.username }}{% if form.username.errors %}<div class="field-error">{{ form.username.errors }}</div>{% endif %}</div>
+    <div class="field"><div class="field-label-row"><label for="{{ form.password.id_for_label }}">{% trans "Password" %}</label></div><div class="auth-password-wrap">{{ form.password }}<button class="password-toggle" type="button" data-password-toggle aria-label="{% trans 'Show password' %}" data-show-label="{% trans 'Show password' %}" data-hide-label="{% trans 'Hide password' %}" aria-controls="{{ form.password.id_for_label }}" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.25 12s3.5-6 9.75-6 9.75 6 9.75 6-3.5 6-9.75 6S2.25 12 2.25 12Z"/><circle cx="12" cy="12" r="2.75"/><path class="eye-slash" d="m4 4 16 16"/></svg></button></div>{% if form.password.errors %}<div class="field-error">{{ form.password.errors }}</div>{% endif %}</div>
+    {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+    <button class="button button-primary button-wide" type="submit">{% trans "Sign in" %} <span aria-hidden="true">→</span></button>
+  </form>
+  <p class="auth-switch"><a href="{% url 'resend_verification' %}">{% trans "Need a new verification code?" %}</a></p>
+  <p class="auth-switch">{% trans "New to Cashbook?" %} <a href="{% url 'signup' %}">{% trans "Create an account" %}</a></p>
+{% endblock %}

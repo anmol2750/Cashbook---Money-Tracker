@@ -1,0 +1,9 @@
+Hello {{ user.display_name }},
+
+Your Cashbook verification code is:
+
+{{ code }}
+
+Enter this 6-digit code in the signup verification screen. It expires in {{ expires_minutes }} minutes. Do not share this code with anyone.
+
+If you did not create this account, you can ignore this email.

@@ -1,0 +1,41 @@
+{% extends "cashbook/base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Calculator" %}{% endblock %}
+{% block content %}
+  <div class="basic-calculator-page">
+    <div class="page-heading cash-heading">
+      <div><span class="eyebrow">{% trans "QUICK CALCULATIONS" %}</span><h1>{% trans "Calculator" %}</h1><p>{% trans "A simple calculator for everyday arithmetic." %}</p></div>
+    </div>
+    <div class="basic-calculator-layout">
+      <section class="panel calculator-card basic-calculator-card" data-basic-calculator aria-label="{% trans 'Calculator' %}">
+        <div class="calculator-display">
+          <output class="calculator-expression" data-expression aria-live="polite"></output>
+          <output class="calculator-result" data-result aria-live="polite">0</output>
+        </div>
+        <div class="calculator-keypad">
+          <button class="calc-key calc-utility" type="button" data-action="clear" aria-label="{% trans 'Clear all' %}">AC</button>
+          <button class="calc-key calc-utility" type="button" data-action="sign" aria-label="{% trans 'Change sign' %}">±</button>
+          <button class="calc-key calc-utility" type="button" data-action="percent" aria-label="{% trans 'Percent' %}">%</button>
+          <button class="calc-key calc-operator" type="button" data-operator="/" aria-label="{% trans 'Divide' %}">÷</button>
+          <button class="calc-key" type="button" data-digit="7">7</button>
+          <button class="calc-key" type="button" data-digit="8">8</button>
+          <button class="calc-key" type="button" data-digit="9">9</button>
+          <button class="calc-key calc-operator" type="button" data-operator="*" aria-label="{% trans 'Multiply' %}">×</button>
+          <button class="calc-key" type="button" data-digit="4">4</button>
+          <button class="calc-key" type="button" data-digit="5">5</button>
+          <button class="calc-key" type="button" data-digit="6">6</button>
+          <button class="calc-key calc-operator" type="button" data-operator="-" aria-label="{% trans 'Subtract' %}">−</button>
+          <button class="calc-key" type="button" data-digit="1">1</button>
+          <button class="calc-key" type="button" data-digit="2">2</button>
+          <button class="calc-key" type="button" data-digit="3">3</button>
+          <button class="calc-key calc-operator" type="button" data-operator="+" aria-label="{% trans 'Add' %}">+</button>
+          <button class="calc-key calc-zero" type="button" data-digit="0">0</button>
+          <button class="calc-key" type="button" data-action="decimal" aria-label="{% trans 'Decimal point' %}">.</button>
+          <button class="calc-key calc-equals" type="button" data-action="equals" aria-label="{% trans 'Equals' %}">=</button>
+        </div>
+        <div class="calculator-footnote"><span aria-hidden="true">⌨</span>{% trans "Keyboard input is supported." %}</div>
+      </section>
+    </div>
+  </div>
+{% endblock %}
+{% block scripts %}<script src="{% static 'cashbook/basic_calculator.js' %}" defer></script>{% endblock %}

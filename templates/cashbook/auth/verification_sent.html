@@ -1,0 +1,29 @@
+{% extends "cashbook/auth/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Verify your email" %}{% endblock %}
+{% block auth_content %}
+  <span class="eyebrow">{% trans "ONE MORE STEP" %}</span>
+  <h2>{% trans "Check your email" %}</h2>
+  {% if console_backend and delivery_status == "failed" %}
+    <p class="auth-subtitle">{% trans "Your account was created, but the email could not be printed. Check the runserver output and email settings, then request another code below." %}</p>
+  {% elif console_backend %}
+    <p class="auth-subtitle">{% trans "Development email mode is active. The OTP is printed in the terminal running Django instead of being delivered to an inbox. Configure SMTP settings to send codes by email." %}</p>
+  {% elif delivery_status == "sent" %}
+    <p class="auth-subtitle">{% trans "We sent a 6-digit verification code to" %} <strong>{{ email }}</strong>. {% trans "Enter it below to activate your account. It expires in" %} {{ expires_minutes }} {% trans "minutes." %}</p>
+  {% elif delivery_status == "failed" %}
+    <p class="auth-subtitle">{% trans "Your account was created, but we could not send the verification code. Check the email settings or request another code below." %}</p>
+  {% elif delivery_status == "requested" %}
+    <p class="auth-subtitle">{% trans "If this address belongs to an unverified account, a fresh code has been sent if it was time to resend." %}</p>
+  {% else %}
+    <p class="auth-subtitle">{% trans "If you just signed up, check your inbox and spam folder for a 6-digit verification code." %}</p>
+  {% endif %}
+  <form method="post" action="{% url 'verify_otp' %}" class="stack-form">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="form-errors">{{ form.non_field_errors }}</div>{% endif %}
+    <div class="field"><label for="{{ form.email.id_for_label }}">{% translate form.email.label %}</label>{{ form.email }}{% if form.email.errors %}<div class="field-error">{{ form.email.errors }}</div>{% endif %}</div>
+    <div class="field"><label for="{{ form.code.id_for_label }}">{% translate form.code.label %}</label>{{ form.code }}{% if form.code.errors %}<div class="field-error">{{ form.code.errors }}</div>{% endif %}</div>
+    <button class="button button-primary button-wide" type="submit">{% trans "Verify email" %} <span aria-hidden="true">→</span></button>
+  </form>
+  <p class="auth-switch"><a href="{% url 'resend_verification' %}">{% trans "Need a new verification code?" %}</a></p>
+  <p class="auth-switch"><a href="{% url 'login' %}">{% trans "Back to sign in" %}</a></p>
+{% endblock %}

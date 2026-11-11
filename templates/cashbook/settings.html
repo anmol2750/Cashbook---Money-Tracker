@@ -1,0 +1,129 @@
+{% extends "cashbook/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Settings" %}{% endblock %}
+{% block content %}
+  <div class="page-heading"><div><span class="eyebrow">{% trans "MAKE IT YOURS" %}</span><h1>{% trans "Settings" %}</h1><p>{% trans "Update your profile and how Cashbook works for you." %}</p></div></div>
+  <nav class="settings-tabs" aria-label="{% trans 'Settings tabs' %}">
+    <a class="settings-tab {% if tab == 'profile' %}active{% endif %}" href="{% url 'settings' %}?tab=profile">{% trans "Profile" %}</a>
+    <a class="settings-tab {% if tab == 'language' %}active{% endif %}" href="{% url 'settings' %}?tab=language">{% trans "Language" %}</a>
+    <a class="settings-tab {% if tab == 'dark-mode' %}active{% endif %}" href="{% url 'settings' %}?tab=dark-mode">{% trans "Dark mode" %}</a>
+    <a class="settings-tab {% if tab == 'date-format' %}active{% endif %}" href="{% url 'settings' %}?tab=date-format">{% trans "Date format" %}</a>
+    <a class="settings-tab {% if tab == 'time-format' %}active{% endif %}" href="{% url 'settings' %}?tab=time-format">{% trans "Time format" %}</a>
+    <a class="settings-tab {% if tab == 'currency-format' %}active{% endif %}" href="{% url 'settings' %}?tab=currency-format">{% trans "Currency format" %}</a>
+    <a class="settings-tab {% if tab == 'about' %}active{% endif %}" href="{% url 'settings' %}?tab=about">{% trans "About" %}</a>
+    <a class="settings-tab {% if tab == 'privacy-policy' %}active{% endif %}" href="{% url 'settings' %}?tab=privacy-policy">{% trans "Privacy Policy" %}</a>
+  </nav>
+  {% if tab == "about" %}
+    <section class="panel settings-panel language-panel about-panel">
+      <div class="settings-card-heading"><span class="settings-icon">i</span><div><h2>{% trans "About Cashbook" %}</h2><p>{% trans "A calmer way to keep track." %}</p></div></div>
+      <div class="about-copy">
+        <p>{% trans "A simple place to see where your money goes, and where it takes you." %}</p>
+        <p>{% trans "Your cashbook is private to you." %}</p>
+      </div>
+    </section>
+  {% elif tab == "privacy-policy" %}
+    <section class="panel settings-panel privacy-policy-panel">
+      <div class="settings-card-heading"><span class="settings-icon">◇</span><div><h2>{% trans "Privacy Policy" %}</h2><p>{% trans "How Cashbook handles the information you add." %}</p></div></div>
+      <article class="privacy-policy-copy">
+        <section aria-labelledby="privacy-information">
+          <p>{% trans "Anmol Gupta built the Cash Book app as an Ad  Supported app. This service is provided by Anmol Gupta and is intended for use as is."%}</p>
+          <h3 id="privacy-information">{% trans "Information stored in Cashbook" %}</h3>
+          <p>{% trans "Cashbook stores the information needed to provide your account and cashbook: your email address, your name if you add it, and your display preferences such as language, date, time, currency, and theme." %}</p>
+          <p>{% trans "The financial records you enter are stored with your account, including transaction account names and currencies, cash-in and cash-out amounts, categories, descriptions, and dates. Cashbook also stores the notes and calendar events you create." %}</p>
+          <p>{% trans "For sign-in and email verification, Cashbook stores a password hash rather than your readable password. Verification codes are stored as hashes and expire; temporary verification records also track expiry, resend time, and failed attempts." %}</p>
+        </section>
+
+        <section aria-labelledby="privacy-use">
+          <h3 id="privacy-use">{% trans "How information is used" %}</h3>
+          <p>{% trans "Cashbook uses this information to authenticate you, save and display your records, calculate account balances and summaries, apply filters, provide calculators, generate transaction exports you request, and remember your preferences." %}</p>
+          <p>{% trans "Your email address is used for account sign-in and verification. Verification messages are sent through the email service configured by the operator of your Cashbook installation." %}</p>
+        </section>
+
+        <section aria-labelledby="privacy-access">
+          <h3 id="privacy-access">{% trans "Access and sharing" %}</h3>
+          <p>{% trans "Cashbook associates records with your user account and shows them after you sign in. The app does not connect to your bank or process payments; transactions are the information you enter." %}</p>
+          <p>{% trans "Cashbook does not sell your personal information. The operator of the installation and its infrastructure or email providers may process information as needed to host the app, maintain its database, or deliver verification messages. Their handling depends on how that installation is configured." %}</p>
+          <p>{% trans "When you export transactions to Excel or PDF, you choose where to save the file and whether to share it. Anyone with access to an exported file may be able to read its contents." %}</p>
+        </section>
+
+        <section aria-labelledby="privacy-storage">
+          <h3 id="privacy-storage">{% trans "Storage, retention, and deletion" %}</h3>
+          <p>{% trans "Information is stored in the database configured for the Cashbook installation. The standard development setup uses a local SQLite database. The site operator determines where a deployed database and its backups are stored and how long backups are retained." %}</p>
+          <p>{% trans "You can edit or delete records using the available Cashbook features. To ask for removal of account information that you cannot delete in the app, contact the person or organization that operates your Cashbook installation. Deleted information may remain in backups until those backups are replaced or removed." %}</p>
+        </section>
+
+        <section aria-labelledby="privacy-security">
+          <h3 id="privacy-security">{% trans "Keeping your information safe" %}</h3>
+          <p>{% trans "Cashbook uses Django's authentication and password-hashing features and requires a signed-in account to access personal records. No online service can guarantee absolute security. The operator is responsible for securing the server, database, email configuration, backups, and network connection; a deployed site should use HTTPS." %}</p>
+        </section>
+
+        <section aria-labelledby="privacy-changes">
+          <h3 id="privacy-changes">{% trans "Policy changes and questions" %}</h3>
+          <p>{% trans "This policy may be updated when Cashbook's features or data practices change. For questions about this policy or a particular installation, contact that installation's operator." %}</p>
+        </section>
+        <p class="policy-updated">{% trans "Last updated" %}: <time datetime="2026-11-10">10 November 2026</time></p>
+      </article>
+    </section>
+  {% elif tab == "date-format" %}
+    <section class="panel settings-panel language-panel">
+      <div class="settings-card-heading"><span class="settings-icon">▦</span><div><h2>{% trans "Date format" %}</h2><p>{% trans "Choose how dates appear throughout your cashbook." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=date-format" class="stack-form settings-form preference-form">{% csrf_token %}
+        <input type="hidden" name="action" value="date_format">
+        {% for field in date_format_form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}<small class="help-text">{% trans "Example: 31/12/2026, 12/31/2026, or 2026-12-31." %}</small></div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save date format" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% elif tab == "time-format" %}
+    <section class="panel settings-panel language-panel">
+      <div class="settings-card-heading"><span class="settings-icon">◷</span><div><h2>{% trans "Time format" %}</h2><p>{% trans "Choose how event times appear across your calendar." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=time-format" class="stack-form settings-form preference-form">{% csrf_token %}
+        <input type="hidden" name="action" value="time_format">
+        {% for field in time_format_form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}<small class="help-text">{% trans "12-hour example: 3:30 PM. 24-hour example: 15:30." %}</small></div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save time format" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% elif tab == "currency-format" %}
+    <section class="panel settings-panel language-panel">
+      <div class="settings-card-heading"><span class="settings-icon">¤</span><div><h2>{% trans "Currency format" %}</h2><p>{% trans "Choose how currency is displayed throughout your cashbook." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=currency-format" class="stack-form settings-form preference-form">{% csrf_token %}
+        <input type="hidden" name="action" value="currency_format">
+        {% for field in currency_format_form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}<small class="help-text">{% trans "Use the symbol or ISO currency code before each amount." %}</small></div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save currency format" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% elif tab == "dark-mode" %}
+    <section class="panel settings-panel language-panel theme-panel">
+      <div class="settings-card-heading"><span class="settings-icon">◐</span><div><h2>{% trans "Dark mode" %}</h2><p>{% trans "Choose the appearance that feels comfortable to you." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=dark-mode" class="stack-form settings-form theme-form">{% csrf_token %}
+        <input type="hidden" name="action" value="dark_mode">
+        <div class="theme-setting-row">
+          <div class="theme-setting-copy"><strong>{% trans "Use dark appearance" %}</strong><p>{% trans "Darken the background and panels throughout Cashbook." %}</p></div>
+          <label class="theme-switch" for="{{ dark_mode_form.dark_mode.id_for_label }}">{{ dark_mode_form.dark_mode }}<span class="theme-switch-track" aria-hidden="true"></span><span class="visually-hidden">{% trans "Enable dark mode" %}</span></label>
+        </div>
+        {% if dark_mode_form.dark_mode.errors %}<div class="field-error">{{ dark_mode_form.dark_mode.errors }}</div>{% endif %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save appearance" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% elif tab == "language" %}
+    <section class="panel settings-panel language-panel">
+      <div class="settings-card-heading"><span class="settings-icon">文</span><div><h2>{% trans "Language" %}</h2><p>{% trans "Choose the language used across your cashbook." %}</p></div></div>
+      <form method="post" action="{% url 'settings' %}?tab=language" class="stack-form settings-form">{% csrf_token %}
+        <input type="hidden" name="action" value="language">
+        {% for field in language_form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}</div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save language" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+  {% else %}
+    <div class="settings-layout">
+      <section class="panel settings-panel"><div class="settings-card-heading"><span class="settings-icon">◎</span><div><h2>{% trans "Personal details" %}</h2><p>{% trans "Change your name and the default currency for new accounts." %}</p></div></div>
+        <div class="account-email"><span class="account-email-icon">✉</span><div><small>{% trans "EMAIL ADDRESS" %}</small><strong>{{ user.email }}</strong></div><span class="verified-pill">{% trans "Account email" %}</span></div>
+        <form method="post" action="{% url 'settings' %}?tab=profile" class="stack-form settings-form">{% csrf_token %}
+          <input type="hidden" name="action" value="profile">
+          {% for field in form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}</div>{% endfor %}
+          <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Save changes" %} <span aria-hidden="true">→</span></button></div>
+        </form>
+      </section>
+      <section class="panel settings-panel security-panel"><div class="settings-card-heading"><span class="settings-icon lock-icon">⌑</span><div><h2>{% trans "Password & security" %}</h2><p>{% trans "Keep your account secure with a strong password." %}</p></div></div><div class="security-row"><div><strong>{% trans "Password" %}</strong><small>{% trans "Change your password at any time." %}</small></div><a class="button button-secondary button-small" href="{% url 'password_change' %}">{% trans "Change password" %} <span>→</span></a></div></section>
+    </div>
+  {% endif %}
+{% endblock %}

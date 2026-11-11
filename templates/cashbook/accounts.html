@@ -1,0 +1,27 @@
+{% extends "cashbook/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Accounts" %}{% endblock %}
+{% block content %}
+  <div class="page-heading"><div><span class="eyebrow">{% trans "YOUR MONEY" %}</span><h1>{% trans "Transaction accounts" %}</h1><p>{% trans "Keep cash, savings, and bank activity in separate accounts." %}</p></div></div>
+  <div class="accounts-layout">
+    <section class="panel settings-panel account-create-panel">
+      <div class="settings-card-heading"><span class="settings-icon">＋</span><div><h2>{% trans "Create an account" %}</h2><p>{% trans "Give each cash or bank balance its own transaction list." %}</p></div></div>
+      <form method="post" class="stack-form settings-form">{% csrf_token %}
+        {% for field in form %}<div class="field"><label for="{{ field.id_for_label }}">{% translate field.label %}</label>{{ field }}{% if field.errors %}<div class="field-error">{{ field.errors }}</div>{% endif %}</div>{% endfor %}
+        <div class="form-actions"><button class="button button-primary" type="submit">{% trans "Create account" %} <span aria-hidden="true">→</span></button></div>
+      </form>
+    </section>
+    <section class="panel settings-panel account-list-panel">
+      <div class="settings-card-heading"><span class="settings-icon">▤</span><div><h2>{% trans "Your accounts" %}</h2><p>{% trans "Each account has its own balance and transaction history. Choose an account from the sidebar to view it." %}</p></div></div>
+      <div class="transaction-account-list">
+        {% for summary in account_summaries %}
+          <article class="transaction-account-card {% if summary.is_active %}active-account-card{% endif %}">
+            <div class="transaction-account-copy"><div class="transaction-account-title"><h3>{{ summary.account.name }}</h3>{% if summary.is_active %}<span class="active-account-badge">{% trans "Active" %}</span>{% endif %}</div><p>{{ summary.account.currency }} · {{ summary.transaction_count }} {% trans "transactions" %}</p></div>
+            <strong class="transaction-account-balance">{{ summary.balance }}</strong>
+            <a class="button button-secondary button-small account-rename-link" href="{% url 'transaction_account_rename' summary.account.pk %}">{% trans "Rename" %}</a>
+          </article>
+        {% empty %}<p class="account-empty">{% trans "Create your first transaction account to get started." %}</p>{% endfor %}
+      </div>
+    </section>
+  </div>
+{% endblock %}
